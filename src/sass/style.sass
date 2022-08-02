@@ -1,3 +1,104 @@
 @import _fonts, _reset,_variables,_animation
 
+html,
+body
+	height: 100%
+
+*
+	font-size: $font-m
+	color: $text-color
+	scrollbar-width: thin
+	scrollbar-color: $secondary-light $bg-color
+
+*::-webkit-scrollbar
+	height: 12px
+	width: 12px
+
+*::-webkit-scrollbar-track
+	background: $bg-color
+
+*::-webkit-scrollbar-thumb
+	background-color: $secondary-light
+	border-radius: 6px
+	border: 3px solid $bg-color
+
+.container
+	display: flex
+	flex-direction: column
+	min-height: 100%
+	max-width: 1170px
+	margin: 0 auto
+	width: 100%
+main
+	flex: 1 0 auto
+footer
+	flex: 1 0 auto
+.button
+	font-weight: 500
+	font-size: $font-m
+	padding: 12px 24px
+	color: $light-text-color
+	background: $primary-color
+	border: none
+	line-height: 22px
+	border-radius: 4px
+	cursor: pointer
+.menu
+	display: flex
+	align-items: center
+	justify-content: center
+	&-item
+		text-transform: uppercase
+	&-link
+		width: 100%
+		height: 100%
+.header
+	display: flex
+	align-items: center
+	border-bottom: 1px solid $secondary-light
+	padding: 0 20px
+	&-logo
+		height: 60px
+	&-inner
+		display: flex
+		flex-direction: column
+	&-info
+		padding: 14px 0 18px
+		border-bottom: 1px solid $secondary-light
+		display: flex
+		align-items: center
+		&__search
+			flex: 1 0 auto
+		&__phone
+			font-size: $font-m
+			font-weight: 600
+			line-height: 22px
+			color: $primary-color
+			padding: 12px 24px
+			padding-right: 64px
+		&__work
+			padding-right: 64px
+			&-title
+				font-weight: 500
+				font-size: $font-m
+				line-height: 22px
+				padding-bottom: 4px
+
+			&-hours
+				font-size: $font-m
+				sup
+					font-size: $font-xs
+				span
+					font-weight: 500
+					font-weight: 500
+		&__contacts
+			&-address
+				padding-bottom: 4px
+
+	&-menu
+		&__item
+			display: flex
+		&__link
+			padding: 16px 32px
+
 @import _media

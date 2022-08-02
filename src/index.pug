@@ -8,25 +8,30 @@ html(lang='ru')
     title System Solution
   body
     header.header
-      img.logo.header-logo
+      img.logo.header-logo(src='assets/logo-dark.svg', alt='Logo')
       .container
         .header-inner
           .header-info
             .header-info__search
             a.phone.header-info__phone(href='tel:+375292222240') +375 (29) 222-22-40
-              .header-info__work
-                .header-info__work-title Режим работы
-                .header-info__work-hours пн - пт 9 <sup>00</sup> - 18 <sup>00</sup>
-              .header-info__contacts 
-                .header-info__contacts-address Минск, ул.Казинца, дом 11а, офис Б-405
-                a.header-info__contacts-email(href='mailto:director@it-1.by') director@it-1.by
-            ul.menu.header-menu
-              li.menu-item.header-menu__item о компании
-              li.menu-item.header-menu__item услуги
-              li.menu-item.header-menu__item цены
-              li.menu-item.header-menu__item информация
-              li.menu-item.header-menu__item контакты
-      button.button.header-logo заказать звонок
+            .header-info__work
+              .header-info__work-title Режим работы
+              .header-info__work-hours пн - пт <span>9</span><sup>00</sup> - <span>18</span><sup>00</sup>
+            .header-info__contacts 
+              .header-info__contacts-address Минск, ул.Казинца, дом 11а, офис Б-405
+              a.header-info__contacts-email(href='mailto:director@it-1.by') director@it-1.by
+          ul.menu.header-menu
+            li.menu-item.header-menu__item
+              a.menu-link.header-menu__link(href='') о компании
+            li.menu-item.header-menu__item
+              a.menu-link.header-menu__link(href='') услуги
+            li.menu-item.header-menu__item
+              a.menu-link.header-menu__link(href='') цены
+            li.menu-item.header-menu__item
+              a.menu-link.header-menu__link(href='') информация
+            li.menu-item.header-menu__item
+              a.menu-link.header-menu__link(href='') контакты
+      button.button.header-button заказать звонок
     main.main 
       section.hero 
         .container
