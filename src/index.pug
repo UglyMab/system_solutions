@@ -13,6 +13,15 @@ html(lang='ru')
         .header-inner
           .header-info
             .header-info__search
+              img.header-info__search-icon(
+                src='assets/search-icon.svg',
+                alt=''
+              )
+              input.hidden.header-info__search-input(
+                type='text',
+                placeholder='12312312312'
+              )
+
             a.phone.header-info__phone(href='tel:+375292222240') +375 (29) 222-22-40
             .header-info__work
               .header-info__work-title Режим работы
@@ -35,50 +44,62 @@ html(lang='ru')
     main.main 
       section.hero 
         .container
-          .hero-text 
-            p.hero-text__suptitle Нет системного администратора в штате?
-            h1.hero-text__title it-аутсорсинг
-            p.hero-text__subtitle Экономия около <b>50%</b> на организации и содержании рабочего места для системного администратора
-          img.hero-image(src='', alt='')
+          .hero-wrapper
+            .hero-text 
+              p.hero-text__suptitle Нет системного администратора в штате?
+              h1.hero-text__title it-аутсорсинг
+              p.hero-text__subtitle Экономия около <b>50%</b> на организации и содержании рабочего места для системного администратора
+            img.hero-image(src='assets/hero-img.svg', alt='Hero')
       section.advantages 
         .container
           h2.section-title.advantages-title Преимущества
           .advantages-items
             .advantages-item
-              .advantages-item__image-wrapper
-                img.advantages-item__image(src='', alt='')
+              img.advantages-item__image(
+                src='assets/advantages (1).svg',
+                alt=''
+              )
               p.advantages-item__title Экономия
               p.advantages-item__description При работе с нами экономия до 50% от заработной платы штатного системного администратора
             .advantages-item
-              .advantages-item__image-wrapper
-                img.advantages-item__image(src='', alt='')
+              img.advantages-item__image(
+                src='assets/advantages (2).svg',
+                alt=''
+              )
               p.advantages-item__title Нет отпуска
               p.advantages-item__description Специалист на аутсорсинге не уходит в отпуск, всегда есть сотрудник на связи
             .advantages-item
-              .advantages-item__image-wrapper
-                img.advantages-item__image(src='', alt='')
+              img.advantages-item__image(
+                src='assets/advantages (3).svg',
+                alt=''
+              )
               p.advantages-item__title Оперативный выезд
               p.advantages-item__description При невозможности решить проблему удаленно, оперативный выезд к заказчику
             .advantages-item
-              .advantages-item__image-wrapper
-                img.advantages-item__image(src='', alt='')
+              img.advantages-item__image(
+                src='assets/advantages (4).svg',
+                alt=''
+              )
               p.advantages-item__title Работа по договору
               p.advantages-item__description Специалист находится в нашем офисе и все расходы по его содержанию возложены на нас
       section.about 
         .container
-          h2.about-title О компании
+          h2.about-title.section-title О компании
           .about-inner 
-            img.about-image(src='', alt='')
+            img.about-image(src='assets/about-img.svg', alt='about')
             .about-text
               .about-text__description Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis nunc nisl lectus quam interdum duis congue ultrices. Sodales nulla nunc id sit imperdiet et gravida ac. Adipiscing leo, pellentesque orci aliquam et. Commodo adipiscing ut erat at at. Urna hac lacus, nec duis porttitor a. Rhoncus tellus eleifend vitae, pulvinar massa elementum erat risus sit. Id nunc donec quis nunc. Viverra risus quis risus ornare consequat eros adipiscing. In mauris commodo volutpat morbi. Viverra neque tellus mi semper euismod malesuada egestas ipsum. Vitae nisi interdum feugiat molestie diam semper. Lectus sit tincidunt vitae, lobortis massa ut. Dapibus posuere lorem ornare in.
               button.about-text__button Читать полностью
-                img.about-text__button-icon
+                img.about-text__button-icon(
+                  src='assets/arrow-right.svg',
+                  alt='arrow-right'
+                )
       section.services
         .container
-          h2.services-title 
+          h2.services-title.section-title Услуги
           .services-inner 
             ul.services-tabs
-              li.services-tab Обслуживание компьютеров
+              li.services-tab.active Обслуживание компьютеров
               li.services-tab Обслуживание сервисов
               li.services-tab IT-аутсорсинг
               li.services-tab Монтаж СКС и ЛВС
@@ -86,41 +107,54 @@ html(lang='ru')
               li.services-tab Видеонаблюдение
               li.services-tab Внедрение и сопровождение Битрикс24
             .services-text 
-              img.services-text__image(src='', alt='')
+              img.services-text__image(src='assets/services (1).svg', alt='')
               .services-text__description Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis nunc nisl lectus quam interdum duis congue ultrices. Sodales nulla nunc id sit imperdiet et gravida ac. Adipiscing leo, pellentesque orci aliquam et. Commodo adipiscing ut erat at at. Urna hac lacus, nec duis porttitor a
       section.prices 
         .container
-          h2.prices-title 
-          p.prices-subtitle 
-          .prices-cards 
-          .prices-card
-            img.prices-card__image(src='', alt='')
-            h3.prices-card__title Обслуживание компьютеров
-            .prices-card__bottom
-              .prices-card__price 1100 byn
-              img.prices-card__icon 
-          .prices-card
-            img.prices-card__image(src='', alt='')
-            h3.prices-card__title Обслуживание серверов
-            .prices-card__bottom
-              .prices-card__price 1100
-              img.prices-card__icon 
-          .prices-card
-            img.prices-card__image(src='', alt='')
-            h3.prices-card__title IT-аутсорсинг
-            .prices-card__bottom
-              .prices-card__price 1100
-              img.prices-card__icon 
-          .prices-card
-            img.prices-card__image(src='', alt='')
-            h3.prices-card__title Монтаж СКС и ЛВС
-            .prices-card__bottom
-              .prices-card__price 1100
-              img.prices-card__icon 
-          button.button.prices-button посмотреть все цены
+          .prices-wrapper
+            h2.prices-title.section-title Цены
+            p.prices-subtitle Чаще всего нам заказывают
+            .prices-cards 
+              .prices-card
+                img.prices-card__image(src='assets/prices (1).svg', alt='')
+                h3.prices-card__title Обслуживание компьютеров
+                .prices-card__bottom
+                  .prices-card__price 1100<span>byn</span>
+                  img.prices-card__icon(
+                    src='assets/arrow-right-dark.svg',
+                    alt=''
+                  ) 
+              .prices-card
+                img.prices-card__image(src='assets/prices (1).svg', alt='')
+                h3.prices-card__title Обслуживание серверов
+                .prices-card__bottom
+                  .prices-card__price 1100<span>byn</span>
+                  img.prices-card__icon(
+                    src='assets/arrow-right-dark.svg',
+                    alt=''
+                  ) 
+              .prices-card
+                img.prices-card__image(src='assets/prices (1).svg', alt='')
+                h3.prices-card__title IT-аутсорсинг
+                .prices-card__bottom
+                  .prices-card__price 1100<span>byn</span>
+                  img.prices-card__icon(
+                    src='assets/arrow-right-dark.svg',
+                    alt=''
+                  ) 
+              .prices-card
+                img.prices-card__image(src='assets/prices (1).svg', alt='')
+                h3.prices-card__title Монтаж СКС и ЛВС
+                .prices-card__bottom
+                  .prices-card__price 1100<span>byn</span>
+                  img.prices-card__icon(
+                    src='assets/arrow-right-dark.svg',
+                    alt=''
+                  ) 
+            button.button.prices-button посмотреть все цены
       section.calculator 
         .container
-          h2.calculator-title Калькулятор
+          h2.calculator-title.section-title Калькулятор
           p.calculator-subtitle Здесь вы можете предварительно расчитать стоимость услуги
           .calculator-inner 
             .calculator-block.range-wrapper
@@ -155,77 +189,75 @@ html(lang='ru')
 
       section.feedback.feedback-left 
         .container
-          img.feedback-image(src='', alt='')
-          form.feedback-form(action='') 
-            h3.feedback-form__title Появились вопросы?
-            p.feedback-form__subtitle Оставьте нам ваши контактные данные и мы перезвоним вам в течении 30 минут
-            input.input.feedback-form__input 
-            input.input.feedback-form__input 
-            button.button.feedback-form__button заказать звонок
+          .feedback-wrapper
+            img.feedback-image(src='assets/form-image.svg', alt='')
+            form.feedback-form(action='') 
+              h3.feedback-form__title Появились вопросы?
+              p.feedback-form__subtitle Оставьте нам ваши контактные данные и мы перезвоним вам в течении 30 минут
+              input.input.feedback-form__input(placeholder='Ваше имя') 
+              input.input.feedback-form__input(placeholder='Ваше имя') 
+              button.button.feedback-form__button заказать звонок
       section.how 
         .container
           h2.section-title.how-title Как мы работаем
-            .advantages-items
-              .advantages-item
-                .advantages-item__image-wrapper
-                  img.advantages-item__image(src='', alt='')
-                p.advantages-item__description Звоните нам или оставляете заявку на сайте
-              .advantages-item
-                .advantages-item__image-wrapper
-                  img.advantages-item__image(src='', alt='')
-                p.advantages-item__description Мы связываемся с вами, уточняем о возникшей проблеме и проводим бесплатную консультацию по решению
-              .advantages-item
-                .advantages-item__image-wrapper
-                  img.advantages-item__image(src='', alt='')
-                p.advantages-item__description Определяем порядок действий. Подписываем договор
-              .advantages-item
-                .advantages-item__image-wrapper
-                  img.advantages-item__image(src='', alt='')
-                p.advantages-item__description Решаем все поставленные задачи
+          .advantages-items
+            .advantages-item
+              img.advantages-item__image(src='assets/how (1).svg', alt='')
+              p.advantages-item__description Звоните нам или оставляете заявку на сайте
+            .advantages-item
+              img.advantages-item__image(src='assets/how (2).svg', alt='')
+              p.advantages-item__description Мы связываемся с вами, уточняем о возникшей проблеме и проводим бесплатную консультацию по решению
+            .advantages-item
+              img.advantages-item__image(src='assets/how (3).svg', alt='')
+              p.advantages-item__description Определяем порядок действий. Подписываем договор
+            .advantages-item
+              img.advantages-item__image(src='assets/how (4).svg', alt='')
+              p.advantages-item__description Решаем все поставленные задачи
       section.team 
         .container
-          h2.section-title.team-title 
+          h2.section-title.team-title Наша компания
           .team-slider.slider-wrapper 
             .team-slider__item
-              img.team-slider__item-image(src='', alt='')
+              img.team-slider__item-image(src='assets/team-image.svg', alt='')
               .team-slider__item-position Должность
               .team-slider__item-lastname Фамилия
               .team-slider__item-name Имя Отчество
             .team-slider__item
-              img.team-slider__item-image(src='', alt='')
+              img.team-slider__item-image(src='assets/team-image.svg', alt='')
               .team-slider__item-position Должность
               .team-slider__item-lastname Фамилия
               .team-slider__item-name Имя Отчество
             .team-slider__item
-              img.team-slider__item-image(src='', alt='')
+              img.team-slider__item-image(src='assets/team-image.svg', alt='')
               .team-slider__item-position Должность
               .team-slider__item-lastname Фамилия
               .team-slider__item-name Имя Отчество
       section.reviews 
         .container
-          h2.section-title.reviews-title 
+          h2.section-title.reviews-title Отзывы
           .reviews-slider.slider-wrapper 
             .reviews-slider__item
-              img.reviews-slider__item-image(src='', alt='')
+              img.reviews-slider__item-image(src='assets/reviews.svg', alt='')
               .reviews-slider__item-inner
                 .reviews-slider__item-name Имя Отчество
                 .reviews-slider__item-description “Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis nunc nisl lectus quam interdum duis congue ultrices. Sodales nulla nunc id sit imperdiet et gravida ac. Adipiscing leo, pellentesque orci aliquam et. Commodo adipiscing ut erat at at. Urna hac lacus, nec duis porttitor a”
                 .reviews-slider__item-date 01.07.2022
             .reviews-slider__item
-              img.reviews-slider__item-image(src='', alt='')
+              img.reviews-slider__item-image(src='assets/reviews.svg', alt='')
               .reviews-slider__item-inner
                 .reviews-slider__item-name Имя Отчество
                 .reviews-slider__item-description “Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis nunc nisl lectus quam interdum duis congue ultrices. Sodales nulla nunc id sit imperdiet et gravida ac. Adipiscing leo, pellentesque orci aliquam et. Commodo adipiscing ut erat at at. Urna hac lacus, nec duis porttitor a”
                 .reviews-slider__item-date 01.07.2022
       section.feedback.feedback-right 
         .container
-          img.feedback-image(src='', alt='')
-          form.feedback-form(action='') 
-            h3.feedback-form__title Все еще сомневаетесь?
-            p.feedback-form__subtitle Оставьте заявку и наши менеджеры помогут вам сэконимить бюджет
-            input.input.feedback-form__input 
-            input.input.feedback-form__input 
-            button.button.feedback-form__button отправить заявку
+          .feedback-wrapper
+            img.feedback-image(src='assets/form-image-2.svg', alt='')
+            form.feedback-form(action='') 
+              h3.feedback-form__title Все еще сомневаетесь?
+              p.feedback-form__subtitle Оставьте заявку и наши менеджеры помогут вам сэконимить бюджет
+              input.input.feedback-form__input(placeholder='Ваше имя') 
+              input.input.feedback-form__input(placeholder='Ваш телефон') 
+              button.button.feedback-form__button отправить заявку
     footer.footer
       .container
         img.footer-logo(src='', alt='')

@@ -1,104 +1,487 @@
 @import _fonts, _reset,_variables,_animation
 
+//  общие стили
 html,
 body
-	height: 100%
-
+  height: 100%
 *
-	font-size: $font-m
-	color: $text-color
-	scrollbar-width: thin
-	scrollbar-color: $secondary-light $bg-color
-
+  font-size: $font-m
+  color: $text-color
+  scrollbar-width: thin
+  scrollbar-color: $secondary-light $bg-color
+a,button,input
+  outline: transparent
+// скроллбар
 *::-webkit-scrollbar
-	height: 12px
-	width: 12px
-
+  height: 12px
+  width: 12px
 *::-webkit-scrollbar-track
-	background: $bg-color
-
+  background: $bg-color
 *::-webkit-scrollbar-thumb
-	background-color: $secondary-light
-	border-radius: 6px
-	border: 3px solid $bg-color
+  background-color: $secondary-light
+  border-radius: 6px
+  border: 3px solid $bg-color
 
+// контейнер
 .container
-	display: flex
-	flex-direction: column
-	min-height: 100%
-	max-width: 1170px
-	margin: 0 auto
-	width: 100%
+  display: flex
+  flex-direction: column
+  min-height: 100%
+  max-width: 1170px
+  margin: 0 auto
+  width: 100%
+
 main
-	flex: 1 0 auto
-footer
-	flex: 1 0 auto
+  flex: 1 0 auto
+section
+  margin-bottom: 80px
+.section-title
+  font-weight: 600
+  font-size: $font-xxl
+  line-height: 44px
+  text-align: center
+  margin-bottom: 40px
+// кнопка
 .button
-	font-weight: 500
-	font-size: $font-m
-	padding: 12px 24px
-	color: $light-text-color
-	background: $primary-color
-	border: none
-	line-height: 22px
-	border-radius: 4px
-	cursor: pointer
+  font-weight: 500
+  font-size: $font-m
+  padding: 12px 24px
+  color: $light-text-color
+  background: $primary-color
+  border: none
+  line-height: 22px
+  border-radius: 4px
+  cursor: pointer
+
+// общие для меню
 .menu
-	display: flex
-	align-items: center
-	justify-content: center
-	&-item
-		text-transform: uppercase
-	&-link
-		width: 100%
-		height: 100%
+  display: flex
+  align-items: center
+  justify-content: center
+  &-item
+    text-transform: uppercase
+  &-link
+    width: 100%
+    height: 100%
+
+// шапка
 .header
-	display: flex
-	align-items: center
-	border-bottom: 1px solid $secondary-light
-	padding: 0 20px
-	&-logo
-		height: 60px
-	&-inner
-		display: flex
-		flex-direction: column
-	&-info
-		padding: 14px 0 18px
-		border-bottom: 1px solid $secondary-light
-		display: flex
-		align-items: center
-		&__search
-			flex: 1 0 auto
-		&__phone
-			font-size: $font-m
-			font-weight: 600
-			line-height: 22px
-			color: $primary-color
-			padding: 12px 24px
-			padding-right: 64px
-		&__work
-			padding-right: 64px
-			&-title
-				font-weight: 500
-				font-size: $font-m
-				line-height: 22px
-				padding-bottom: 4px
+  display: flex
+  align-items: center
+  border-bottom: 1px solid $secondary-light
+  padding: 0 20px
+  // лого
+  &-logo
+    height: 60px
+  // общий контейнер шапки
+  &-inner
+    display: flex
+    flex-direction: column
+  // контейнер с информацией
+  &-info
+    padding: 14px 0 18px
+    border-bottom: 1px solid $secondary-light
+    display: flex
+    align-items: center
 
-			&-hours
-				font-size: $font-m
-				sup
-					font-size: $font-xs
-				span
-					font-weight: 500
-					font-weight: 500
-		&__contacts
-			&-address
-				padding-bottom: 4px
+    &__search
+      margin-right: auto
+      border: 1px solid #C3C3C3
+      border-radius: 4px
+      display: flex
+      align-items: center
+      padding: 11px
+      &-input
 
-	&-menu
-		&__item
-			display: flex
-		&__link
-			padding: 16px 32px
+        border: none
+        line-height: 22px
+        padding-left: 10px
+    &__phone
+      font-size: $font-m
+      font-weight: 600
+      line-height: 22px
+      color: $primary-color
+      padding: 12px 24px
+      padding-right: 64px
+    &__work
+      padding-right: 64px
+      &-title
+        font-weight: 500
+        font-size: $font-m
+        line-height: 22px
+        padding-bottom: 4px
 
+      &-hours
+        font-size: $font-m
+        sup
+          font-size: $font-xs
+        span
+          font-weight: 500
+          font-weight: 500
+    &__contacts
+      &-address
+        padding-bottom: 4px
+
+  &-menu
+    &__item
+      display: flex
+    &__link
+      padding: 16px 32px
+
+// главный экран
+.hero
+  &-wrapper
+    display: flex
+    align-items: center
+    justify-content: space-between
+    max-width: 1076px
+  &-text
+    display: flex
+    flex-direction: column
+    max-width: 570px
+    &__suptitle
+      font-size: $font-s
+      line-height: 19px
+      color: $secondary-color
+    &__title
+      font-size: $font-title
+      font-weight: 700
+      line-height: 77px
+      text-transform: capitalize
+      color: $primary-color
+    &__subtitle
+      font-size: $font-l
+      line-height: 24px
+      b
+        color: $secondary-color
+        font-size: $font-xl
+        line-height: 29px
+  &-image
+    object-fit: cover
+    width: 100%
+    max-width: 376px
+
+// преимущества
+.advantages
+  &-items
+    display: flex
+    justify-content: space-between
+    gap: 0 30px
+  &-item
+    display: flex
+    flex-direction: column
+    align-items: center
+    &__image
+      object-fit: cover
+      width: 100%
+      max-width: 64px
+    &__title
+      padding: 24px 0 8px
+      font-size: $font-l
+      font-weight: 600
+      line-height: 24px
+      text-align: center еуче-фдшптЖ сутеук
+
+    &__description
+      line-height: 19px
+      font-size: $font-s
+      text-align: center
+      width: 100%
+      font-weight: 400
+      max-width: 270px
+
+.hidden
+  display: none
+
+// о нас
+
+.about
+  &-inner
+    display: flex
+    align-items: center
+    gap: 0 100px
+  &-image
+    object-fit: cover
+    width: 100%
+    max-width: 500px
+  &-text
+    display: flex
+    flex-direction: column
+    max-width: 570px
+    width: 100%
+    &__description
+      font-size: $font-s
+      line-height: 140%
+      margin-bottom: 32px
+    &__button
+      display: flex
+      align-items: center
+      border: none
+      background: transparent
+      &-icon
+        width: 24px
+        height: 24px
+
+// услуги
+.services
+  &-inner
+    display: flex
+  &-tabs
+    display: flex
+    flex-direction: column
+    flex: 1
+  &-tab
+    padding: 14px 24px
+    position: relative
+    cursor: pointer
+    font-size: $font-s
+
+    &.active
+      background: left / contain no-repeat url("../assets/tab.svg")
+      color: $light-text-color
+      padding-left: 64px
+      font-weight: 600
+    &:hover
+      color: $light-text-color
+      background: left / contain no-repeat url("../assets/tab.svg")
+
+  &-text
+    display: flex
+    align-items: center
+    gap: 0 30px
+    &__image
+      object-fit: cover
+      width: 100%
+      max-width: 300px
+    &__description
+      width: 100%
+      font-size: $font-s
+      line-height: 140%
+      max-width: 370px
+
+// цены
+.prices
+  &-wrapper
+    display: flex
+    flex-direction: column
+    align-items: center
+    width: 100%
+  &-title
+    margin-bottom: 4px
+  &-subtitle
+    text-align: center
+    margin-bottom: 40px
+    font-size: $font-s
+    line-height: 19px
+  &-cards
+    display: flex
+    width: 100%
+    gap: 30
+    justify-content: space-between
+  &-card
+    display: flex
+    flex-direction: column
+    border: 1px solid $secondary-light
+    border-radius: 4px
+    padding: 16px 24px
+    &__image
+      margin: 0 10px 8px
+      object-fit: cover
+      width: 100%
+      max-width: 200px
+    &__title
+      text-align: center
+      font-size: $font-s
+      line-height: 19px
+      margin-bottom: 27px
+    &__bottom
+      display: flex
+      align-items: center
+      justify-content: space-between
+    &__price
+      color: $primary-color
+      font-weight: 600
+      font-size: $font-xl
+      line-height: 29px
+      text-transform: uppercase
+      span
+        font-size: $font-xs
+        font-weight: 400
+        line-height: 17px
+        color: inherit
+        margin-left: 4px
+    &__icon
+      width: 40px
+      height: 40px
+      stroke: $text-color
+  &-button
+    background: transparent
+    color: $text-color
+    margin-top: 40px
+    border: 1px solid $primary-color
+
+// форма обратной связи
+
+.feedback
+  background: $primary-color
+  &-wrapper
+    position: relative
+    display: flex
+    justify-content: space-between
+    align-items: center
+    &::after
+      position: absolute
+      top: -2px
+      left: 300px
+      content: ''
+      width: 250px
+      height: 101%
+      background: no-repeat url("../assets/separator.svg")
+      background-size: auto 100%
+  &-right
+    .feedback-wrapper
+      &::after
+        transform: rotate(180deg)
+        position: absolute
+        top: -2px
+        left: 600px
+        content: ''
+        width: 250px
+        height: 101%
+        background: no-repeat url("../assets/separator.svg")
+        background-size: auto 100%
+    .feedback-form
+      order: 1
+    .feedback-image
+      order: 2
+  &-image
+    margin: 0 10px 8px
+    object-fit: cover
+    width: 100%
+    max-width: 300px
+  &-form
+    display: flex
+    flex-direction: column
+    max-width: 470px
+    align-items: start
+    margin: 40px 0
+    &__title
+      font-weight: 600
+      font-size: $font-xxl
+      line-height: 44px
+      color: #fff
+      margin-bottom: 8px
+    &__subtitle
+      font-weight: 400
+      line-height: 120%
+      font-size: $font-s
+      color: #fff
+      margin-bottom: 30px
+    &__input
+      width: 370px
+      background: #fff
+      padding: 14px 16px
+      font-size: 16px
+      line-height: 120%
+      border: none
+      border-radius: 4px
+      margin-bottom: 16px
+      &::placeholder
+        color: $text-color
+    &__button
+      margin-top: 8px
+      background: $secondary-color
+
+// о нас
+.how
+  .advantages-item__image
+    margin-bottom: 24px
+
+// слайдер    
+.slider-wrapper
+  display: flex
+  justify-content: space-between
+  align-items: center
+  position: relative
+  gap: 30px
+  &::before,&::after
+    background: url('../assets/slider-arrow.svg') center/ cover no-repeat
+    width: 40px
+    height: 40px
+    position: absolute
+    content: ''
+    top: 50%
+    transform: translate(0, -50%)
+  &::before
+    left: -70px
+    transform: rotate(180deg) translateY(50%)
+
+  &::after
+    right: -70px
+
+// о нас
+.team
+  &-slider
+    &__item
+      display: flex
+      flex-direction: column
+      align-items: center
+      border-radius: 4px
+      border: 1px solid $secondary-light
+      padding: 16px 35px
+
+      &-image
+        object-fit: cover
+        width: 100%
+        max-width: 300px
+      &-position
+        font-size: $font-s
+        line-height: 140%
+        margin-bottom: 16px
+        margin-top: 8px
+      &-lastname
+        font-size: $font-xl
+        text-transform: capitalize
+        line-height: 29px
+        margin-bottom: 4px
+        color: $primary-color
+        font-weight: 600
+      &-name
+        font-size: $font-l
+        margin-bottom: 10px
+        line-height: 24px
+        color: $primary-color
+        font-weight: 600
+// отзывы
+.reviews
+  &-title
+  &-slider
+    &__item
+      padding: 24px 32px
+      display: flex
+      align-items: center
+      gap: 0 30px
+      max-width: 570px
+      width: 100%
+      border-radius: 4px
+      border: 1px solid $secondary-light
+      &-image
+        object-fit: cover
+        width: 100%
+        max-width: 240px
+      &-inner
+        display: flex
+        flex-direction: column
+      &-name
+        line-height: 19px
+        font-size: $font-s
+        margin-bottom: 16px
+        color: $primary-color
+      &-description
+        font-size: $font-s
+        line-height: 140%
+        margin-bottom: 16px
+      &-date
+        font-size: $font-xs
+        line-height: 140%
 @import _media
