@@ -4,6 +4,7 @@ html(lang='ru')
     meta(charset='UTF-8')
     meta(http-equiv='X-UA-Compatible', content='IE=edge')
     meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    link(rel='stylesheet', href='css/style.css')
     title System Solution
   body
     header.header
@@ -22,4 +23,187 @@ html(lang='ru')
             ul.menu.header-menu
       button.button.header-logo заказать звонок
     main.main 
+      section.hero 
+        .hero-text 
+          p.hero-text__suptitle Нет системного администратора в штате?
+          h1.hero-text__title it-аутсорсинг
+          p.hero-text__subtitle Экономия около <b>50%</b> на организации и содержании рабочего места для системного администратора
+        img.hero-image(src='', alt='')
+      section.advantages 
+        h2.section-title.advantages-title Преимущества
+        .advantages-items
+          .advantages-item
+            .advantages-item__image-wrapper
+              img.advantages-item__image(src='', alt='')
+            p.advantages-item__title Экономия
+            p.advantages-item__description При работе с нами экономия до 50% от заработной платы штатного системного администратора
+          .advantages-item
+            .advantages-item__image-wrapper
+              img.advantages-item__image(src='', alt='')
+            p.advantages-item__title Нет отпуска
+            p.advantages-item__description Специалист на аутсорсинге не уходит в отпуск, всегда есть сотрудник на связи
+          .advantages-item
+            .advantages-item__image-wrapper
+              img.advantages-item__image(src='', alt='')
+            p.advantages-item__title Оперативный выезд
+            p.advantages-item__description При невозможности решить проблему удаленно, оперативный выезд к заказчику
+          .advantages-item
+            .advantages-item__image-wrapper
+              img.advantages-item__image(src='', alt='')
+            p.advantages-item__title Работа по договору
+            p.advantages-item__description Специалист находится в нашем офисе и все расходы по его содержанию возложены на нас
+      section.about 
+        h2.about-title О компании
+        .about-inner 
+          img.about-image(src='', alt='')
+          .about-text
+            .about-text__description Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis nunc nisl lectus quam interdum duis congue ultrices. Sodales nulla nunc id sit imperdiet et gravida ac. Adipiscing leo, pellentesque orci aliquam et. Commodo adipiscing ut erat at at. Urna hac lacus, nec duis porttitor a. Rhoncus tellus eleifend vitae, pulvinar massa elementum erat risus sit. Id nunc donec quis nunc. Viverra risus quis risus ornare consequat eros adipiscing. In mauris commodo volutpat morbi. Viverra neque tellus mi semper euismod malesuada egestas ipsum. Vitae nisi interdum feugiat molestie diam semper. Lectus sit tincidunt vitae, lobortis massa ut. Dapibus posuere lorem ornare in.
+            button.about-text__button Читать полностью
+              img.about-text__button-icon
+      section.services
+        h2.services-title 
+        .services-inner 
+          ul.services-tabs
+            li.services-tab Обслуживание компьютеров
+            li.services-tab Обслуживание сервисов
+            li.services-tab IT-аутсорсинг
+            li.services-tab Монтаж СКС и ЛВС
+            li.services-tab IP-телефония
+            li.services-tab Видеонаблюдение
+            li.services-tab Внедрение и сопровождение Битрикс24
+          .services-text 
+            img.services-text__image(src='', alt='')
+            .services-text__description Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis nunc nisl lectus quam interdum duis congue ultrices. Sodales nulla nunc id sit imperdiet et gravida ac. Adipiscing leo, pellentesque orci aliquam et. Commodo adipiscing ut erat at at. Urna hac lacus, nec duis porttitor a
+      section.prices 
+        h2.prices-title 
+        p.prices-subtitle 
+        .prices-cards 
+        .prices-card
+          img.prices-card__image(src='', alt='')
+          h3.prices-card__title Обслуживание компьютеров
+          .prices-card__bottom
+            .prices-card__price 1100 byn
+            img.prices-card__icon 
+        .prices-card
+          img.prices-card__image(src='', alt='')
+          h3.prices-card__title Обслуживание серверов
+          .prices-card__bottom
+            .prices-card__price 1100
+            img.prices-card__icon 
+        .prices-card
+          img.prices-card__image(src='', alt='')
+          h3.prices-card__title IT-аутсорсинг
+          .prices-card__bottom
+            .prices-card__price 1100
+            img.prices-card__icon 
+        .prices-card
+          img.prices-card__image(src='', alt='')
+          h3.prices-card__title Монтаж СКС и ЛВС
+          .prices-card__bottom
+            .prices-card__price 1100
+            img.prices-card__icon 
+        button.button.prices-button посмотреть все цены
+      section.calculator 
+        h2.calculator-title Калькулятор
+        p.calculator-subtitle Здесь вы можете предварительно расчитать стоимость услуги
+        .calculator-inner 
+          .calculator-block.range-wrapper
+          .calculator-block.range-wrapper
+          .calculator-block.toggle-wrapper
+          .calculator-block.range-wrapper
+          .calculator-options__title
+          .calculator-options__wrapper
+            .calculator-block.range-wrapper
+            .calculator-block.range-wrapper
+            .calculator-block.range-wrapper
+            .calculator-block.range-wrapper
+            .calculator-block.range-wrapper
+            .calculator-block.range-wrapper
+            .calculator-block.range-wrapper
+            .calculator-block.range-wrapper
+          .calculator-total__wrapper
+            .calculator-total__title 
+            .calculator-total__item
+              .calculator-total__item-checkbox 
+              span.calculator-total__item-discount 
+              span.calculator-total__item-price 
+            .calculator-total__item
+              .calculator-total__item-checkbox 
+              span.calculator-total__item-discount 
+              span.calculator-total__item-price 
+            .calculator-total__item
+              .calculator-total__item-checkbox 
+              span.calculator-total__item-discount 
+              span.calculator-total__item-price 
+            button.button.calculator-total__button
+
+      section.feedback.feedback-left 
+        img.feedback-image(src='', alt='')
+        form.feedback-form(action='') 
+          h3.feedback-form__title Появились вопросы?
+          p.feedback-form__subtitle Оставьте нам ваши контактные данные и мы перезвоним вам в течении 30 минут
+          input.input.feedback-form__input 
+          input.input.feedback-form__input 
+          button.button.feedback-form__button заказать звонок
+      section.how 
+        h2.section-title.how-title Как мы работаем
+          .advantages-items
+            .advantages-item
+              .advantages-item__image-wrapper
+                img.advantages-item__image(src='', alt='')
+              p.advantages-item__description Звоните нам или оставляете заявку на сайте
+            .advantages-item
+              .advantages-item__image-wrapper
+                img.advantages-item__image(src='', alt='')
+              p.advantages-item__description Мы связываемся с вами, уточняем о возникшей проблеме и проводим бесплатную консультацию по решению
+            .advantages-item
+              .advantages-item__image-wrapper
+                img.advantages-item__image(src='', alt='')
+              p.advantages-item__description Определяем порядок действий. Подписываем договор
+            .advantages-item
+              .advantages-item__image-wrapper
+                img.advantages-item__image(src='', alt='')
+              p.advantages-item__description Решаем все поставленные задачи
+      section.team 
+        h2.section-title.team-title 
+        .team-slider.slider-wrapper 
+          .team-slider__item
+            img.team-slider__item-image(src='', alt='')
+            .team-slider__item-position Должность
+            .team-slider__item-lastname Фамилия
+            .team-slider__item-name Имя Отчество
+          .team-slider__item
+            img.team-slider__item-image(src='', alt='')
+            .team-slider__item-position Должность
+            .team-slider__item-lastname Фамилия
+            .team-slider__item-name Имя Отчество
+          .team-slider__item
+            img.team-slider__item-image(src='', alt='')
+            .team-slider__item-position Должность
+            .team-slider__item-lastname Фамилия
+            .team-slider__item-name Имя Отчество
+      section.reviews 
+        h2.section-title.reviews-title 
+        .reviews-slider.slider-wrapper 
+          .reviews-slider__item
+            img.reviews-slider__item-image(src='', alt='')
+            .reviews-slider__item-inner
+              .reviews-slider__item-name Имя Отчество
+              .reviews-slider__item-description “Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis nunc nisl lectus quam interdum duis congue ultrices. Sodales nulla nunc id sit imperdiet et gravida ac. Adipiscing leo, pellentesque orci aliquam et. Commodo adipiscing ut erat at at. Urna hac lacus, nec duis porttitor a”
+              .reviews-slider__item-date 01.07.2022
+          .reviews-slider__item
+            img.reviews-slider__item-image(src='', alt='')
+            .reviews-slider__item-inner
+              .reviews-slider__item-name Имя Отчество
+              .reviews-slider__item-description “Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis nunc nisl lectus quam interdum duis congue ultrices. Sodales nulla nunc id sit imperdiet et gravida ac. Adipiscing leo, pellentesque orci aliquam et. Commodo adipiscing ut erat at at. Urna hac lacus, nec duis porttitor a”
+              .reviews-slider__item-date 01.07.2022
+
+      section.feedback.feedback-right 
+        img.feedback-image(src='', alt='')
+        form.feedback-form(action='') 
+          h3.feedback-form__title Появились вопросы?
+          p.feedback-form__subtitle Оставьте нам ваши контактные данные и мы перезвоним вам в течении 30 минут
+          input.input.feedback-form__input 
+          input.input.feedback-form__input 
+          button.button.feedback-form__button заказать звонок
     footer.footer
