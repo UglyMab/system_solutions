@@ -14,13 +14,13 @@ a,button,input
 // скроллбар
 *::-webkit-scrollbar
   height: 12px
-  width: 12px
+  width: 9px
 *::-webkit-scrollbar-track
   background: $bg-color
 *::-webkit-scrollbar-thumb
   background-color: $secondary-light
   border-radius: 6px
-  border: 3px solid $bg-color
+  border: 1px solid $bg-color
 
 // контейнер
 .container
@@ -41,6 +41,13 @@ section
   line-height: 44px
   text-align: center
   margin-bottom: 40px
+
+.phone
+  font-size: $font-m
+  font-weight: 600
+  line-height: 22px
+  color: $primary-color
+  padding: 12px 24px
 // кнопка
 .button
   font-weight: 500
@@ -97,11 +104,7 @@ section
         line-height: 22px
         padding-left: 10px
     &__phone
-      font-size: $font-m
-      font-weight: 600
-      line-height: 22px
-      color: $primary-color
-      padding: 12px 24px
+
       padding-right: 64px
     &__work
       padding-right: 64px
@@ -324,6 +327,8 @@ section
 
 .feedback
   background: $primary-color
+  &:last-child
+    margin-bottom: 0
   &-wrapper
     position: relative
     display: flex
@@ -454,7 +459,6 @@ section
         font-weight: 600
 // отзывы
 .reviews
-  &-title
   &-slider
     &__item
       padding: 24px 32px
@@ -484,4 +488,43 @@ section
       &-date
         font-size: $font-xs
         line-height: 140%
+
+// подвал
+.footer
+  background: $text-color
+  &-wrapper
+    margin: 40px 0
+    display: flex
+    flex-direction: column
+    align-items: center
+  &-logo
+    object-fit: cover
+    width: 100%
+    max-width: 180px
+    margin-bottom: 32px
+  &-menu
+    gap: 40px
+    margin-bottom: 24px
+    &__item
+      text-transform: capitalize
+      color: #fff
+      font-size: $font-s
+      font-weight: 400
+      line-height: 19px
+  &-email
+    color: #fff
+    padding: 12px 24px
+    font-size: $font-m
+    line-height: 22px
+    color: $primary-color
+  &-address,&-work
+    margin-top: 16px
+    color: #fff
+    font-size: $font-xs
+    line-height: 17px
+    sup
+
+      color: #fff
+      font-size: 11px
+
 @import _media
