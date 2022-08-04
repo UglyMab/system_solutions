@@ -1,1 +1,445 @@
+@media screen and (max-width: 1530px)
+  .header-info__work
+    display: none
+@media screen and (max-width: 1370px)
+  .dropdown-close
+    display: block
+    position: absolute
+    top: 20px
+    right: 20px
+  .mobile-menu
+    .menu
+      &-item
+        .dropdown-menu
+          width: 320px
+          z-index: 999
+          &-item
+            width: 100%
+          &-link
+            padding: 20px 24px
+          .dropdown-back
+            position: absolute
+            top: 20px
+            left: 20px
+            transform: rotate(180deg)
+          .dropdown-close
+          .dropdown-link
+            &:hover
+              background: #fff
+              justify-content: flex-start
+              color: $text-color
+      &-link
+        padding: 0 25px
+  .menu
+    display: flex
+    align-items: center
+    justify-content: center
+    &-item
+      text-transform: uppercase
+      position: relative
+      &:hover > ul
+        display: none
+  .container
+    overflow: hidden
+  .sticky
+    top: 0
+  .header-logo
+    height: 40px
+  .header-inner
+    display: none
+  .header-mobile-menu
+    display: flex
+    margin: 23px
+  .reviews-slider__item
+    max-width: 100%
+  .swiper
+    width: 90%
+    margin: 0 auto
+  .swiper-button-prev
+    left: 0%
+    z-index: 3
+  .swiper-button-next
+    right: 0%
+    z-index: 3
+@media screen and (max-width: 1220px)
+  .feedback-wrapper
+    &::after
+      display: none
+  .advantages-item
+    width: 40%
+  .prices-card
+    max-width: 100%
+    width: 40%
+    &__title
+      text-align: left
+      margin-bottom: 13px
+  .calculator-options__item-title
+    max-width: 135px
+// планшеты
+@media screen and (max-width: 1024px)
+  .services
+    &-text
+      position: relative
+      align-items: flex-start
+      padding: 20px
+      &__image
+        position: absolute
+        opacity: 0.1
+  .about
+    &-inner
+      flex-direction: column
+    &-text
+      max-width: 100%
+  .calculator-options__wrapper
+    max-height: 280px
+  .calculator-options__item
+    width: 40%
+    max-width: 40%
+    flex-grow: 1
+@media screen and (max-width: 768px)
+  .how
+    .advantages-item
+      flex-direction: row
+      width: 100%
+      align-items: center
+      &__description
+        max-width: 100%
+        text-align: left
+      &__image
+        margin-bottom: 0
+        width: 32px
+        height: 32px
+        margin-right: 8px
 
+  .services-text__description,.about-text__description,.prices-subtitle,.calculator-subtitle,.advantages-item__description,.reviews-slider__item-description
+    font-size: 14px
+    line-height: 140%
+  .section-title
+    font-size: 24px
+    line-height: 29px
+  .team-slider__item-lastname
+    font-size: 16px
+    line-height: 19px
+  .reviews-slider__item-date
+    font-size: 12px
+    line-height: 140%
+  .team-slider__item-firstname,.reviews-slider__item-name
+    font-size: 14px
+    line-height: 17px
+  .hero
+    &-text
+      &__title
+        font-size: 40px
+        line-height: 48px
+      &__subtitle
+        font-size: 16px
+        line-height: 19px
+        b
+          font-size: 16px
+          line-height: 19px
+  .about
+    &-inner
+      flex-direction: column
+    &-text
+      max-width: 100%
+
+  .prices
+    &-card
+      width: 45%
+  .calculator
+    &-inner
+      padding: 24px 16px
+    &-options
+      &__wrapper
+        max-height: 270px
+        flex-direction: row
+        justify-content: space-between
+        align-items: flex-end
+      &__item
+        max-width: 48%
+        width: 100%
+    &-total
+      &__wrapper
+        position: relative
+        flex-wrap: wrap
+        justify-content: center
+      &__title
+        position: absolute
+        left: 0
+        top: -36px
+      &__item
+        width: 25%
+      &__button
+        margin-top: 24px
+  .range
+    &-wrapper
+      position: relative
+      padding-bottom: 50px
+      .range-output
+        position: absolute
+        left: 50%
+        bottom: 0
+        transform: translateX(-50%)
+        margin-left: 0
+  .toggle
+    &-wrapper
+      margin-bottom: 10px
+      margin-top: -20px
+      span,label
+        margin-top: -50px
+  .feedback
+    &-image
+      max-width: 220px
+    &-form
+      &__title
+
+        font-size: 24px
+        line-height: 29px
+      &__subtitle
+        font-weight: 400
+        font-size: 14px
+        line-height: 120%
+        margin-bottom: 16px
+      &__input
+  .swiper
+    max-width: 90%
+    margin: 0 auto
+  .swiper-button-prev
+    left: 10px
+  .swiper-button-next
+    right: 10px
+@media screen and (max-width: 700px)
+
+  .header
+    flex-wrap: wrap
+    padding: 20px
+    &-button-wrapper
+      width: 200px
+    &-logo-wrapper
+      width: 200px
+    &-button
+      justify-content: center
+      margin-left: 0
+    &-logo
+      margin-right: 0
+    &-mobile-menu
+      margin: 0 0px
+  .hero
+    position: relative
+    &-wrapper
+      padding: 70px 0
+    &-text
+      align-items: center
+      text-align: center
+      margin: 0 auto
+      max-width: 400px
+    &-image
+      position: absolute
+      left: 50%
+      transform: translateX(-50%)
+      z-index: 0
+      opacity: 0.1
+      width: 300px
+  .advantages-item
+    min-width: 280px
+  .calculator-options__wrapper
+    max-height: 100%
+  .calculator-options__item
+    max-width: 100%
+  .calculator-total__wrapper
+    flex-direction: column
+    align-items: center
+  .calculator-total__item
+    align-items: center
+    margin-bottom: 10px
+    width: 100%
+    padding-bottom: 8px
+    border-bottom: 1px solid #c3c3c3
+@media screen and (max-width: 670px)
+  .dropdown-close
+    display: block
+    position: absolute
+    top: 20px
+    right: 20px
+  .mobile-menu
+    .menu
+      &-item
+        .dropdown-menu
+          width: 100vw
+          max-width: 100vw
+          position: fixed
+          height: 100vh
+          top: 0
+          left: 0
+          background: #fff
+          padding-top: 90px
+          &-item
+            width: 100%
+            padding: 10px 20px
+          .dropdown-back
+            display: block
+            position: absolute
+            top: 20px
+            left: 20px
+            transform: rotate(180deg)
+          .dropdown-close
+            display: block
+          .dropdown-link
+            &:hover
+              background: #fff
+              justify-content: flex-start
+              color: $text-color
+      &-link
+        padding: 0 25px
+  .services
+    position: relative
+    &-tabs
+      width: 100%
+      min-width: auto
+    &-tab.active
+      border-radius: 4px
+      background: $primary-color
+      margin-bottom: 300px
+      padding-left: 20px
+    &-tab:hover
+      background: transparent
+      color: $text-color
+    &-text
+      position: absolute
+      top: 120px
+      width: 100%
+      &__description
+        max-width: 100%
+        width: 95%
+        padding: 0
+      &__image
+        width: 80%
+  .about
+    &-inner
+      position: relative
+      max-width: 520px
+      margin: 0 auto
+    &-image
+      position: absolute
+      left: 50%
+      top: 50%
+      transform: translate(-50%, -50%)
+      z-index: 0
+      opacity: 0.1
+      width: 80%
+  .feedback
+    &-image
+      display: none
+  .range-block
+
+    display: none
+  .range-wrapper
+    width: 100%
+    padding-bottom: 10px
+    position: relative
+    .range-output
+      transform: translate(0%,-50%)
+      top: 50%
+      // left: 100%
+      left: auto
+      right: 0px
+  .toggle
+    &-wrapper
+      margin: 0
+      margin-top: -14px
+      label,span
+        margin: 0
+        margin-bottom: 20px
+      span
+        margin-left: 4px
+        margin-right: 10px
+@media screen and (max-width: 590px)
+  .reviews
+    .swiper-button-prev
+      left: auto
+      right: 25%
+  .swiper-button-prev
+    top: auto
+    left: 10%
+    bottom: 0
+    z-index: 3
+  .swiper-button-next
+    right: 10%
+    top: auto
+    bottom: 0
+    z-index: 3
+  .reviews-slider__item
+    flex-direction: column
+  .footer-menu
+    flex-direction: column
+@media screen and (max-width: 490px)
+  .header
+    flex-wrap: wrap
+    padding: 20px
+    justify-content: center
+
+    &-button
+      margin-top: 16px
+      &-wrapper
+        justify-content: center
+        width: 205px
+    &-logo
+      height: 32px
+      &-wrapper
+        width: 206px
+    &-mobile-menu
+      // margin: 0 20px
+      margin-left: auto
+
+  .prices-card
+    width: 100%
+    min-width: 320px
+    margin: 0 -20px
+  .calculator-inner
+    margin: 0 -20px
+  .feedback-form__input
+    width: 100%
+    max-width: 100%
+@media screen and (max-width: 390px)
+  .services
+    .container
+      padding: 0
+  .range-wrapper
+    margin-bottom: 40px
+    .range-output
+      top: auto
+      bottom: -55px
+  .toggle
+    &-block
+
+    &-wrapper
+      margin: 0
+      margin-top: -14px
+      flex-direction: column
+      position: relative
+      align-items: flex-start
+      width: 150px
+      label,span
+        margin: 0
+        margin-bottom: 20px
+      span
+        margin-left: 8px
+  .swiper-button-prev
+    top: auto
+    left: 13%
+    bottom: 0
+    z-index: 3
+  .swiper-button-next
+    right: 13%
+    top: auto
+    bottom: 0
+    z-index: 3
+  .reviews
+    .swiper-button-prev
+      left: auto
+      right: 27%
+  .prices-cards
+    gap: 0
+  .prices-card
+    &:hover
+      transform: scale(1)

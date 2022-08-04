@@ -6,41 +6,88 @@ html(lang='ru')
     meta(name='viewport', content='width=device-width, initial-scale=1.0')
     link(rel='stylesheet', href='css/style.css')
     title System Solution
-  body
-    header.header
-      img.logo.header-logo(src='assets/logo-dark.svg', alt='Logo')
-      .container
-        .header-inner
-          .header-info
-            .header-info__search
-              img.header-info__search-icon(
-                src='assets/search-icon.svg',
-                alt=''
-              )
-              input.hidden.header-info__search-input(
-                type='text',
-                placeholder='12312312312'
-              )
+  body 
+    .mobile-menu 
+      img.mobile-close.dropdown-close(src='assets/close.svg', alt='')
 
-            a.phone.header-info__phone(href='tel:+375292222240') +375 (29) 222-22-40
-            .header-info__work
-              .header-info__work-title Режим работы
-              .header-info__work-hours пн - пт <span>9</span><sup>00</sup> - <span>18</span><sup>00</sup>
-            .header-info__contacts 
-              .header-info__contacts-address Минск, ул.Казинца, дом 11а, офис Б-405
-              a.header-info__contacts-email(href='mailto:director@it-1.by') director@it-1.by
-          ul.menu.header-menu
-            li.menu-item.header-menu__item
-              a.menu-link.header-menu__link(href='') о компании
-            li.menu-item.header-menu__item
-              a.menu-link.header-menu__link(href='') услуги
-            li.menu-item.header-menu__item
-              a.menu-link.header-menu__link(href='') цены
-            li.menu-item.header-menu__item
-              a.menu-link.header-menu__link(href='') информация
-            li.menu-item.header-menu__item
-              a.menu-link.header-menu__link(href='') контакты
-      button.button.header-button заказать звонок
+      a.phone.header-info__phone(href='tel:+375292222240') +375 (29) 222-22-40
+      ul.menu.header-menu
+        li.menu-item.header-menu__item
+          a.menu-link.header-menu__link(href='#') о компании
+        li.menu-item.header-menu__item
+          a.menu-link.header-menu__link.dropdown-open(href='#') услуги
+          ul.dropdown-menu 
+            img.dropdown-back(src='assets/slider-arrow.svg', alt='')
+            img.dropdown-close.dropdown-close-btn(
+              src='assets/close.svg',
+              alt=''
+            )
+            li.dropdown-menu-item
+              a.dropdown-link(href='#') Обслуживание компьютеров
+            li.dropdown-menu-item
+              a.dropdown-link(href='#') Обслуживание серверов
+            li.dropdown-menu-item
+              a.dropdown-link(href='#') IT-аутсорсинг
+            li.dropdown-menu-item
+              a.dropdown-link(href='#') Монтаж СКС и ЛВС
+            li.dropdown-menu-item
+              a.dropdown-link(href='#') IP-телефония
+            li.dropdown-menu-item
+              a.dropdown-link(href='#') Видеонаблюдение
+            li.dropdown-menu-item
+              a.dropdown-link(href='#') Внедрение и сопровождение Битрикс24
+        li.menu-item.header-menu__item
+          a.menu-link.header-menu__link(href='#') цены
+        li.menu-item.header-menu__item
+          a.menu-link.header-menu__link(href='#') информация
+        li.menu-item.header-menu__item
+          a.menu-link.header-menu__link(href='#') контакты
+    header.header.sticky
+      .header-logo-wrapper
+        img.logo.header-logo(src='assets/logo-dark.svg', alt='Logo')
+      img.header-mobile-menu(src='assets/menu-burger.svg', alt='')
+
+      .header-inner
+        .header-info
+          .header-info__search
+            img.header-info__search-icon(src='assets/search-icon.svg', alt='')
+            input.header-info__search-input(type='text', placeholder='')
+
+          a.phone.header-info__phone(href='tel:+375292222240') +375 (29) 222-22-40
+          .header-info__work
+            .header-info__work-title Режим работы
+            .header-info__work-hours пн - пт <span>9</span><sup>00</sup> - <span>18</span><sup>00</sup>
+          .header-info__contacts 
+            .header-info__contacts-address Минск, ул.Казинца, дом 11а, офис Б-405
+            a.header-info__contacts-email(href='mailto:director@it-1.by') director@it-1.by
+        ul.menu.header-menu
+          li.menu-item.header-menu__item
+            a.menu-link.header-menu__link(href='#') о компании
+          li.menu-item.header-menu__item
+            a.menu-link.header-menu__link(href='#') услуги
+            ul.dropdown-menu 
+              li.dropdown-menu-item
+                a.dropdown-link(href='#') Обслуживание компьютеров
+              li.dropdown-menu-item
+                a.dropdown-link(href='#') Обслуживание серверов
+              li.dropdown-menu-item
+                a.dropdown-link(href='#') IT-аутсорсинг
+              li.dropdown-menu-item
+                a.dropdown-link(href='#') Монтаж СКС и ЛВС
+              li.dropdown-menu-item
+                a.dropdown-link(href='#') IP-телефония
+              li.dropdown-menu-item
+                a.dropdown-link(href='#') Видеонаблюдение
+              li.dropdown-menu-item
+                a.dropdown-link(href='#') Внедрение и сопровождение Битрикс24
+          li.menu-item.header-menu__item
+            a.menu-link.header-menu__link(href='#') цены
+          li.menu-item.header-menu__item
+            a.menu-link.header-menu__link(href='#') информация
+          li.menu-item.header-menu__item
+            a.menu-link.header-menu__link(href='#') контакты
+      .header-button-wrapper
+        button.button.header-button заказать звонок
     main.main 
       section.hero 
         .container
@@ -154,38 +201,139 @@ html(lang='ru')
             button.button.prices-button посмотреть все цены
       section.calculator 
         .container
-          h2.calculator-title.section-title Калькулятор
-          p.calculator-subtitle Здесь вы можете предварительно расчитать стоимость услуги
-          .calculator-inner 
-            .calculator-block.range-wrapper
-            .calculator-block.range-wrapper
-            .calculator-block.toggle-wrapper
-            .calculator-block.range-wrapper
-            .calculator-options__title
-            .calculator-options__wrapper
+          .calculator-wrapper
+            h2.calculator-title.section-title Калькулятор
+            p.calculator-subtitle Здесь вы можете предварительно расчитать стоимость услуги
+            .calculator-inner 
               .calculator-block.range-wrapper
+                .range-label Количество рабочих мест
+                .range-block 
+                  ul.range-values
+                    li 0
+                    li 10
+                    li 20
+                    li 30
+                    li 40
+                    li 50
+                    li 60
+                    li 70
+                    li 80
+                  input.range(type='range', min='0', max='80')
+                  span.range-slider
+                .range-output
+                  .range-minus
+                  input.range-number(type='text', value='0')
+                  .range-plus
               .calculator-block.range-wrapper
+                .range-label Количество рабочих мест
+                .range-block 
+                  ul.range-values
+                    li 0
+                    li 10
+                    li 20
+                    li 30
+                    li 40
+                  input.range(type='range', min='0', max='40')
+                  span.range-slider
+                .range-output
+                  .range-minus
+                  input.range-number(type='text', value='0')
+                  .range-plus
+              .calculator-block.toggle-wrapper
+                .toggle-block 
+                  input#microsoft-cbx.toggle-checkbox(type='checkbox') 
+                  label.toggle-checkbox__label(for='microsoft-cbx') 
+                  span.toggle-checkbox__text Microsoft
+                .toggle-block 
+                  input#linux-cbx.toggle-checkbox(type='checkbox') 
+                  label.toggle-checkbox__label(for='linux-cbx') 
+                  span.toggle-checkbox__text Linux
               .calculator-block.range-wrapper
-              .calculator-block.range-wrapper
-              .calculator-block.range-wrapper
-              .calculator-block.range-wrapper
-              .calculator-block.range-wrapper
-              .calculator-block.range-wrapper
-            .calculator-total__wrapper
-              .calculator-total__title 
-              .calculator-total__item
-                .calculator-total__item-checkbox 
-                span.calculator-total__item-discount 
-                span.calculator-total__item-price 
-              .calculator-total__item
-                .calculator-total__item-checkbox 
-                span.calculator-total__item-discount 
-                span.calculator-total__item-price 
-              .calculator-total__item
-                .calculator-total__item-checkbox 
-                span.calculator-total__item-discount 
-                span.calculator-total__item-price 
-              button.button.calculator-total__button
+                .range-label Количество рабочих мест
+                .range-block 
+                  ul.range-values
+                    li 0
+                    li 5
+                    li 10
+                    li 15
+                    li 20
+                  input.range(type='range', min='0', max='20')
+                  span.range-slider
+                .range-output
+                  .range-minus
+                  input.range-number(type='text', value='0')
+                  .range-plus
+              .calculator-options__title Дополнительные опции
+              .calculator-options__wrapper
+                .calculator-block.calculator-options__item
+                  .calculator-options__item-title Телефонная станция IP
+                  .range-output
+                    .range-minus
+                    input.range-number(type='text', value='0')
+                    .range-plus
+                .calculator-block.calculator-options__item
+                  .calculator-options__item-title СКУД
+                  .range-output
+                    .range-minus
+                    input.range-number(type='text', value='0')
+                    .range-plus
+                .calculator-block.calculator-options__item
+                  .calculator-options__item-title Видеорегистратор
+                  .range-output
+                    .range-minus
+                    input.range-number(type='text', value='0')
+                    .range-plus
+                .calculator-block.calculator-options__item
+                  .calculator-options__item-title Гипервизор
+                  .range-output
+                    .range-minus
+                    input.range-number(type='text', value='0')
+                    .range-plus
+                .calculator-block.calculator-options__item
+                  .calculator-options__item-title Считыватель СКУД
+                  .range-output
+                    .range-minus
+                    input.range-number(type='text', value='0')
+                    .range-plus
+                .calculator-block.calculator-options__item
+                  .calculator-options__item-title IP камера видеонаблюдения
+                  .range-output
+                    .range-minus
+                    input.range-number(type='text', value='0')
+                    .range-plus
+                .calculator-block.calculator-options__item
+                  .calculator-options__item-title Сетевое хранилище
+                  .range-output
+                    .range-minus
+                    input.range-number(type='text', value='0')
+                    .range-plus
+                .calculator-block.calculator-options__item
+                  .calculator-options__item-title Управляемый коммутатор / маршрутизатор
+                  .range-output
+                    .range-minus
+                    input.range-number(type='text', value='0')
+                    .range-plus
+              .calculator-total__wrapper
+                .calculator-total__title Итоговая стоимость
+                .calculator-total__item
+                  .calculator-total__item-radio
+                    input#total1(type='radio', name='total')
+                    label(for='total1') на 1 месяц
+                  span.calculator-total__item-discount 0%
+                  span.calculator-total__item-price 1100<span>BYN</span>
+                .calculator-total__item
+                  .calculator-total__item-radio 
+                    input#total2(type='radio', name='total')
+                    label(for='total2') на 6 месяцев
+                  span.calculator-total__item-discount -6%
+                  span.calculator-total__item-price 1034<span>BYN</span>
+                .calculator-total__item
+                  .calculator-total__item-radio 
+                    input#total3(type='radio', name='total', checked)
+                    label(for='total3') на 12 месяцев
+                  span.calculator-total__item-discount -12%
+                  span.calculator-total__item-price 968<span>BYN</span>
+                button.button.calculator-total__button оформить заявку
 
       section.feedback.feedback-left 
         .container
@@ -195,7 +343,7 @@ html(lang='ru')
               h3.feedback-form__title Появились вопросы?
               p.feedback-form__subtitle Оставьте нам ваши контактные данные и мы перезвоним вам в течении 30 минут
               input.input.feedback-form__input(placeholder='Ваше имя') 
-              input.input.feedback-form__input(placeholder='Ваше имя') 
+              input.input.feedback-form__input(placeholder='Ваш телефон') 
               button.button.feedback-form__button заказать звонок
       section.how 
         .container
@@ -216,38 +364,59 @@ html(lang='ru')
       section.team 
         .container
           h2.section-title.team-title Наша компания
-          .team-slider.slider-wrapper 
-            .team-slider__item
-              img.team-slider__item-image(src='assets/team-image.svg', alt='')
-              .team-slider__item-position Должность
-              .team-slider__item-lastname Фамилия
-              .team-slider__item-name Имя Отчество
-            .team-slider__item
-              img.team-slider__item-image(src='assets/team-image.svg', alt='')
-              .team-slider__item-position Должность
-              .team-slider__item-lastname Фамилия
-              .team-slider__item-name Имя Отчество
-            .team-slider__item
-              img.team-slider__item-image(src='assets/team-image.svg', alt='')
-              .team-slider__item-position Должность
-              .team-slider__item-lastname Фамилия
-              .team-slider__item-name Имя Отчество
+          .swiper-button-prev.swiper-team-prev 
+          .swiper-button-next.swiper-team-next 
+          .swiper.swiper-team
+            .team-slider.slider-wrapper
+              .team-slider__item.swiper-slide
+                img.team-slider__item-image(
+                  src='assets/team-image.svg',
+                  alt=''
+                )
+                .team-slider__item-position Должность
+                .team-slider__item-lastname Фамилия
+                .team-slider__item-name Имя Отчество
+              .team-slider__item.swiper-slide
+                img.team-slider__item-image(
+                  src='assets/team-image.svg',
+                  alt=''
+                )
+                .team-slider__item-position Должность
+                .team-slider__item-lastname Фамилия
+                .team-slider__item-name Имя Отчество
+              .team-slider__item.swiper-slide
+                img.team-slider__item-image(
+                  src='assets/team-image.svg',
+                  alt=''
+                )
+                .team-slider__item-position Должность
+                .team-slider__item-lastname Фамилия
+                .team-slider__item-name Имя Отчество
       section.reviews 
         .container
           h2.section-title.reviews-title Отзывы
-          .reviews-slider.slider-wrapper 
-            .reviews-slider__item
-              img.reviews-slider__item-image(src='assets/reviews.svg', alt='')
-              .reviews-slider__item-inner
-                .reviews-slider__item-name Имя Отчество
-                .reviews-slider__item-description “Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis nunc nisl lectus quam interdum duis congue ultrices. Sodales nulla nunc id sit imperdiet et gravida ac. Adipiscing leo, pellentesque orci aliquam et. Commodo adipiscing ut erat at at. Urna hac lacus, nec duis porttitor a”
-                .reviews-slider__item-date 01.07.2022
-            .reviews-slider__item
-              img.reviews-slider__item-image(src='assets/reviews.svg', alt='')
-              .reviews-slider__item-inner
-                .reviews-slider__item-name Имя Отчество
-                .reviews-slider__item-description “Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis nunc nisl lectus quam interdum duis congue ultrices. Sodales nulla nunc id sit imperdiet et gravida ac. Adipiscing leo, pellentesque orci aliquam et. Commodo adipiscing ut erat at at. Urna hac lacus, nec duis porttitor a”
-                .reviews-slider__item-date 01.07.2022
+          .swiper-button-prev.swiper-reviews-prev 
+          .swiper-button-next.swiper-reviews-next 
+          .swiper.swiper-reviews
+            .reviews-slider.slider-wrapper 
+              .reviews-slider__item.swiper-slide
+                img.reviews-slider__item-image(
+                  src='assets/reviews.svg',
+                  alt=''
+                )
+                .reviews-slider__item-inner
+                  .reviews-slider__item-name Имя Отчество
+                  .reviews-slider__item-description “Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis nunc nisl lectus quam interdum duis congue ultrices. Sodales nulla nunc id sit imperdiet et gravida ac. Adipiscing leo, pellentesque orci aliquam et. Commodo adipiscing ut erat at at. Urna hac lacus, nec duis porttitor a”
+                  .reviews-slider__item-date 01.07.2022
+              .reviews-slider__item.swiper-slide
+                img.reviews-slider__item-image(
+                  src='assets/reviews.svg',
+                  alt=''
+                )
+                .reviews-slider__item-inner
+                  .reviews-slider__item-name Имя Отчество
+                  .reviews-slider__item-description “Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis nunc nisl lectus quam interdum duis congue ultrices. Sodales nulla nunc id sit imperdiet et gravida ac. Adipiscing leo, pellentesque orci aliquam et. Commodo adipiscing ut erat at at. Urna hac lacus, nec duis porttitor a”
+                  .reviews-slider__item-date 01.07.2022
       section.feedback.feedback-right 
         .container
           .feedback-wrapper
@@ -263,12 +432,20 @@ html(lang='ru')
         .footer-wrapper
           img.footer-logo(src='assets/logo-light.svg', alt='logo')
           ul.menu.footer-menu
-            li.menu-item.footer-menu__item о компании
-            li.menu-item.footer-menu__item услуги
-            li.menu-item.footer-menu__item цены
-            li.menu-item.footer-menu__item информация
-            li.menu-item.footer-menu__item контакты
+            li.menu-item.footer-menu__item 
+              a.menu-link.footer-menu__link о компании
+            li.menu-item.footer-menu__item 
+              a.menu-link.footer-menu__link услуги
+            li.menu-item.footer-menu__item 
+              a.menu-link.footer-menu__link цены
+            li.menu-item.footer-menu__item 
+              a.menu-link.footer-menu__link информация
+            li.menu-item.footer-menu__item 
+              a.menu-link.footer-menu__link контакты
           a.phone.footer-phone(href='tel:+375292222240') +375 (29) 222-22-40
           a.footer-email(href='mailto:director@it-1.by') director@it-1.by
           .footer-address Минск, ул.Казинца, дом 11а, офис Б-405
           .footer-work Режим работы: пн - пт 9<sup>00</sup> - 18<sup>00</sup>
+
+  script(src='assets/js/swiper-bundle.min.js') 
+  script(src='js/main.min.js') 
