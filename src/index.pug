@@ -8,8 +8,10 @@ html(lang='ru')
     title System Solution
   body 
     .mobile-menu 
-      img.mobile-close.dropdown-close(src='assets/close.svg', alt='')
-
+      img.mobile-close.dropdown-close(
+        src='assets/close.svg',
+        alt='Menu close button'
+      )
       a.phone.header-info__phone(href='tel:+375292222240') +375 (29) 222-22-40
       ul.menu.header-menu
         li.menu-item.header-menu__item
@@ -17,10 +19,13 @@ html(lang='ru')
         li.menu-item.header-menu__item
           a.menu-link.header-menu__link.dropdown-open(href='#') услуги
           ul.dropdown-menu 
-            img.dropdown-back(src='assets/slider-arrow.svg', alt='')
+            img.dropdown-back(
+              src='assets/slider-arrow.svg',
+              alt='Dropdown menu back button'
+            )
             img.dropdown-close.dropdown-close-btn(
               src='assets/close.svg',
-              alt=''
+              alt='Dropdown menu close button'
             )
             li.dropdown-menu-item
               a.dropdown-link(href='#') Обслуживание компьютеров
@@ -43,14 +48,23 @@ html(lang='ru')
         li.menu-item.header-menu__item
           a.menu-link.header-menu__link(href='#') контакты
     header.header.sticky
-      .header-logo-wrapper
-        img.logo.header-logo(src='assets/logo-dark.svg', alt='Logo')
-      img.header-mobile-menu(src='assets/menu-burger.svg', alt='')
+      a.header-logo-wrapper(href='#') 
+        img.logo.header-logo(
+          src='assets/logo-dark.svg',
+          alt='System Solution logo'
+        )
+      img.header-mobile-menu(
+        src='assets/menu-burger.svg',
+        alt='Open mobile menu button'
+      )
 
       .header-inner
         .header-info
           .header-info__search
-            img.header-info__search-icon(src='assets/search-icon.svg', alt='')
+            img.header-info__search-icon(
+              src='assets/search-icon.svg',
+              alt='Search button'
+            )
             input.header-info__search-input(type='text', placeholder='')
 
           a.phone.header-info__phone(href='tel:+375292222240') +375 (29) 222-22-40
@@ -96,36 +110,36 @@ html(lang='ru')
               p.hero-text__suptitle Нет системного администратора в штате?
               h1.hero-text__title it-аутсорсинг
               p.hero-text__subtitle Экономия около <b>50%</b> на организации и содержании рабочего места для системного администратора
-            img.hero-image(src='assets/hero-img.svg', alt='Hero')
+            img.hero-image(src='assets/hero-img.svg', alt='Hero image')
       section.advantages 
         .container
           h2.section-title.advantages-title Преимущества
           .advantages-items
             .advantages-item
               img.advantages-item__image(
-                src='assets/advantages (1).svg',
-                alt=''
+                src='assets/advantages(1).svg',
+                alt='Advantages image'
               )
               p.advantages-item__title Экономия
               p.advantages-item__description При работе с нами экономия до 50% от заработной платы штатного системного администратора
             .advantages-item
               img.advantages-item__image(
-                src='assets/advantages (2).svg',
-                alt=''
+                src='assets/advantages(2).svg',
+                alt='Advantages image'
               )
               p.advantages-item__title Нет отпуска
               p.advantages-item__description Специалист на аутсорсинге не уходит в отпуск, всегда есть сотрудник на связи
             .advantages-item
               img.advantages-item__image(
-                src='assets/advantages (3).svg',
-                alt=''
+                src='assets/advantages(3).svg',
+                alt='Advantages image'
               )
               p.advantages-item__title Оперативный выезд
               p.advantages-item__description При невозможности решить проблему удаленно, оперативный выезд к заказчику
             .advantages-item
               img.advantages-item__image(
-                src='assets/advantages (4).svg',
-                alt=''
+                src='assets/advantages(4).svg',
+                alt='Advantages image'
               )
               p.advantages-item__title Работа по договору
               p.advantages-item__description Специалист находится в нашем офисе и все расходы по его содержанию возложены на нас
@@ -133,13 +147,13 @@ html(lang='ru')
         .container
           h2.about-title.section-title О компании
           .about-inner 
-            img.about-image(src='assets/about-img.svg', alt='about')
+            img.about-image(src='assets/about-img.svg', alt='About image')
             .about-text
               .about-text__description Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis nunc nisl lectus quam interdum duis congue ultrices. Sodales nulla nunc id sit imperdiet et gravida ac. Adipiscing leo, pellentesque orci aliquam et. Commodo adipiscing ut erat at at. Urna hac lacus, nec duis porttitor a. Rhoncus tellus eleifend vitae, pulvinar massa elementum erat risus sit. Id nunc donec quis nunc. Viverra risus quis risus ornare consequat eros adipiscing. In mauris commodo volutpat morbi. Viverra neque tellus mi semper euismod malesuada egestas ipsum. Vitae nisi interdum feugiat molestie diam semper. Lectus sit tincidunt vitae, lobortis massa ut. Dapibus posuere lorem ornare in.
               button.about-text__button Читать полностью
                 img.about-text__button-icon(
                   src='assets/arrow-right.svg',
-                  alt='arrow-right'
+                  alt='Read more button'
                 )
       section.services
         .container
@@ -153,9 +167,49 @@ html(lang='ru')
               li.services-tab IP-телефония
               li.services-tab Видеонаблюдение
               li.services-tab Внедрение и сопровождение Битрикс24
-            .services-text 
-              img.services-text__image(src='assets/services (1).svg', alt='')
-              .services-text__description Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis nunc nisl lectus quam interdum duis congue ultrices. Sodales nulla nunc id sit imperdiet et gravida ac. Adipiscing leo, pellentesque orci aliquam et. Commodo adipiscing ut erat at at. Urna hac lacus, nec duis porttitor a
+            .services-texts
+              .services-text.visible 
+                img.services-text__image(
+                  src='assets/services(1).svg',
+                  alt='Services image'
+                )
+                .services-text__description Lorem ipsum dolor sit amet, consectetur adipiscing elit. ac. Adipiscing leo, pellentesque orci aliquam et. Commodo adipiscing ut erat at at. Urna hac lacus, nec duis porttitor a
+              .services-text 
+                img.services-text__image(
+                  src='assets/services(1).svg',
+                  alt='Services image'
+                )
+                .services-text__description Lorem ipsum dol
+              .services-text 
+                img.services-text__image(
+                  src='assets/services(1).svg',
+                  alt='Services image'
+                )
+                .services-text__description Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis nunc nisl lectus quam interdum duis congue ultrices. Sodales nulla nunc id sit imperdiet et gravida ac. Adipiscing leo, pellentesque orci aliquam et. Commodo adipiscing ut erat at at. Urna h
+              .services-text 
+                img.services-text__image(
+                  src='assets/services(1).svg',
+                  alt='Services image'
+                )
+                .services-text__description Lorem
+              .services-text 
+                img.services-text__image(
+                  src='assets/services(1).svg',
+                  alt='Services image'
+                )
+                .services-text__description Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis nunc nisl lectus quam interdum duis congue ultrices. Sodales nulla nunc id sit imperdiet et gravida ac. Adipiscing leo, pellentesque orci aliquam et. Commodo adipiscing ut erat at at. Urna hac lacus, nec duis porttitor a
+              .services-text 
+                img.services-text__image(
+                  src='assets/services(1).svg',
+                  alt='Services image'
+                )
+                .services-text__description Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis nunc nisl lectus quam interdum duis congue ultrices. Sodales nulla nunc id sit imperdiet et gravida ac. Adipiscing leo, pellentesque orci aliquam et. Commodo adipiscing ut erat at at. Urna hac lacus, nec duis porttitor a Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis nunc nisl lectus quam interdum duis congue ultrices. Sodales nulla nunc id sit imperdiet et gravida ac. Adipiscing leo, pellentesque orci aliquam et. Commodo adipiscing ut erat at at. Urna hac lacus, nec duis porttitor a Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis nunc nisl lectus quam interdum duis congue ultrices. Sodales nulla nunc id sit imperdiet et gravida ac. Adipiscing leo, pellentesque orci aliquam et. Commodo adipiscing ut erat at at. Urna hac lacus, nec duis porttitor a
+              .services-text 
+                img.services-text__image(
+                  src='assets/services(1).svg',
+                  alt='Services image'
+                )
+                .services-text__description Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis nunc nisl lectus quam interdum duis congue ultrices. Sodales nulla nunc id sit imperdiet et gravida ac. Adipiscing leo, pellentesque orci aliquam et. Commodo adipiscing ut erat at at. Urna hac lacus, nec duis porttitor a Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis nunc nisl lectus quam interdum duis congue ultrices. Sodales nulla nunc id sit imperdiet et gravida ac. Adipiscing leo, pellentesque orci aliquam et. Commodo adipiscing ut erat at at. Urna hac lacus, nec duis porttitor a Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis nunc nisl lectus quam interdum duis congue ultrices. Sodales nulla nunc id sit imperdiet et gravida ac. Adipiscing leo, pellentesque orci aliquam et. Commodo adipiscing ut erat at at. Urna hac lacus, nec duis porttitor a
       section.prices 
         .container
           .prices-wrapper
@@ -163,40 +217,52 @@ html(lang='ru')
             p.prices-subtitle Чаще всего нам заказывают
             .prices-cards 
               .prices-card
-                img.prices-card__image(src='assets/prices (1).svg', alt='')
+                img.prices-card__image(
+                  src='assets/prices(1).svg',
+                  alt='Prices card image'
+                )
                 h3.prices-card__title Обслуживание компьютеров
                 .prices-card__bottom
                   .prices-card__price 1100<span>byn</span>
                   img.prices-card__icon(
-                    src='assets/arrow-right-dark.svg',
-                    alt=''
+                    src='assets/arrow-right.svg',
+                    alt='More arrow'
                   ) 
               .prices-card
-                img.prices-card__image(src='assets/prices (1).svg', alt='')
+                img.prices-card__image(
+                  src='assets/prices(1).svg',
+                  alt='Prices card image'
+                )
                 h3.prices-card__title Обслуживание серверов
                 .prices-card__bottom
                   .prices-card__price 1100<span>byn</span>
                   img.prices-card__icon(
-                    src='assets/arrow-right-dark.svg',
-                    alt=''
+                    src='assets/arrow-right.svg',
+                    alt='More arrow'
                   ) 
               .prices-card
-                img.prices-card__image(src='assets/prices (1).svg', alt='')
+                img.prices-card__image(
+                  src='assets/prices(1).svg',
+                  alt='Prices card image'
+                )
                 h3.prices-card__title IT-аутсорсинг
                 .prices-card__bottom
                   .prices-card__price 1100<span>byn</span>
                   img.prices-card__icon(
-                    src='assets/arrow-right-dark.svg',
-                    alt=''
+                    src='assets/arrow-right.svg',
+                    alt='More arrow'
                   ) 
               .prices-card
-                img.prices-card__image(src='assets/prices (1).svg', alt='')
+                img.prices-card__image(
+                  src='assets/prices(1).svg',
+                  alt='Prices card image'
+                )
                 h3.prices-card__title Монтаж СКС и ЛВС
                 .prices-card__bottom
                   .prices-card__price 1100<span>byn</span>
                   img.prices-card__icon(
-                    src='assets/arrow-right-dark.svg',
-                    alt=''
+                    src='assets/arrow-right.svg',
+                    alt='More arrow'
                   ) 
             button.button.prices-button посмотреть все цены
       section.calculator 
@@ -218,7 +284,7 @@ html(lang='ru')
                     li 60
                     li 70
                     li 80
-                  input.range(type='range', min='0', max='80')
+                  input.range(type='range', min='0', value='0', max='80')
                   span.range-slider
                 .range-output
                   .range-minus
@@ -233,7 +299,7 @@ html(lang='ru')
                     li 20
                     li 30
                     li 40
-                  input.range(type='range', min='0', max='40')
+                  input.range(type='range', min='0', value='0', max='40')
                   span.range-slider
                 .range-output
                   .range-minus
@@ -257,7 +323,7 @@ html(lang='ru')
                     li 10
                     li 15
                     li 20
-                  input.range(type='range', min='0', max='20')
+                  input.range(type='range', min='0', value='0', max='20')
                   span.range-slider
                 .range-output
                   .range-minus
@@ -338,8 +404,8 @@ html(lang='ru')
       section.feedback.feedback-left 
         .container
           .feedback-wrapper
-            img.feedback-image(src='assets/form-image.svg', alt='')
-            form.feedback-form(action='') 
+            img.feedback-image(src='assets/form-image.svg', alt='Form image')
+            form.feedback-form 
               h3.feedback-form__title Появились вопросы?
               p.feedback-form__subtitle Оставьте нам ваши контактные данные и мы перезвоним вам в течении 30 минут
               input.input.feedback-form__input(placeholder='Ваше имя') 
@@ -350,16 +416,28 @@ html(lang='ru')
           h2.section-title.how-title Как мы работаем
           .advantages-items
             .advantages-item
-              img.advantages-item__image(src='assets/how (1).svg', alt='')
+              img.advantages-item__image(
+                src='assets/how(1).svg',
+                alt='How we work image'
+              )
               p.advantages-item__description Звоните нам или оставляете заявку на сайте
             .advantages-item
-              img.advantages-item__image(src='assets/how (2).svg', alt='')
+              img.advantages-item__image(
+                src='assets/how(2).svg',
+                alt='How we work image'
+              )
               p.advantages-item__description Мы связываемся с вами, уточняем о возникшей проблеме и проводим бесплатную консультацию по решению
             .advantages-item
-              img.advantages-item__image(src='assets/how (3).svg', alt='')
+              img.advantages-item__image(
+                src='assets/how(3).svg',
+                alt='How we work image'
+              )
               p.advantages-item__description Определяем порядок действий. Подписываем договор
             .advantages-item
-              img.advantages-item__image(src='assets/how (4).svg', alt='')
+              img.advantages-item__image(
+                src='assets/how(4).svg',
+                alt='How we work image'
+              )
               p.advantages-item__description Решаем все поставленные задачи
       section.team 
         .container
@@ -371,7 +449,7 @@ html(lang='ru')
               .team-slider__item.swiper-slide
                 img.team-slider__item-image(
                   src='assets/team-image.svg',
-                  alt=''
+                  alt='Person picture'
                 )
                 .team-slider__item-position Должность
                 .team-slider__item-lastname Фамилия
@@ -379,7 +457,7 @@ html(lang='ru')
               .team-slider__item.swiper-slide
                 img.team-slider__item-image(
                   src='assets/team-image.svg',
-                  alt=''
+                  alt='Person picture'
                 )
                 .team-slider__item-position Должность
                 .team-slider__item-lastname Фамилия
@@ -387,7 +465,7 @@ html(lang='ru')
               .team-slider__item.swiper-slide
                 img.team-slider__item-image(
                   src='assets/team-image.svg',
-                  alt=''
+                  alt='Person picture'
                 )
                 .team-slider__item-position Должность
                 .team-slider__item-lastname Фамилия
@@ -402,7 +480,7 @@ html(lang='ru')
               .reviews-slider__item.swiper-slide
                 img.reviews-slider__item-image(
                   src='assets/reviews.svg',
-                  alt=''
+                  alt='Review person picture'
                 )
                 .reviews-slider__item-inner
                   .reviews-slider__item-name Имя Отчество
@@ -411,7 +489,7 @@ html(lang='ru')
               .reviews-slider__item.swiper-slide
                 img.reviews-slider__item-image(
                   src='assets/reviews.svg',
-                  alt=''
+                  alt='Review person picture'
                 )
                 .reviews-slider__item-inner
                   .reviews-slider__item-name Имя Отчество
@@ -420,8 +498,8 @@ html(lang='ru')
       section.feedback.feedback-right 
         .container
           .feedback-wrapper
-            img.feedback-image(src='assets/form-image-2.svg', alt='')
-            form.feedback-form(action='') 
+            img.feedback-image(src='assets/form-image-2.svg', alt='Form image')
+            form.feedback-form 
               h3.feedback-form__title Все еще сомневаетесь?
               p.feedback-form__subtitle Оставьте заявку и наши менеджеры помогут вам сэконимить бюджет
               input.input.feedback-form__input(placeholder='Ваше имя') 
@@ -430,7 +508,7 @@ html(lang='ru')
     footer.footer
       .container
         .footer-wrapper
-          img.footer-logo(src='assets/logo-light.svg', alt='logo')
+          img.footer-logo(src='assets/logo-light.svg', alt='Footer logo')
           ul.menu.footer-menu
             li.menu-item.footer-menu__item 
               a.menu-link.footer-menu__link о компании
@@ -447,5 +525,5 @@ html(lang='ru')
           .footer-address Минск, ул.Казинца, дом 11а, офис Б-405
           .footer-work Режим работы: пн - пт 9<sup>00</sup> - 18<sup>00</sup>
 
-  script(src='assets/js/swiper-bundle.min.js') 
-  script(src='js/main.min.js') 
+    script(src='assets/js/swiper-bundle.min.js') 
+    script(src='js/main.min.js') 

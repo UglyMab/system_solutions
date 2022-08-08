@@ -307,6 +307,7 @@ section
     flex-direction: column
     flex: 1 0
     min-width: 380px
+
   &-tab
     padding: 14px 24px
     position: relative
@@ -314,18 +315,20 @@ section
     font-size: $font-s
     display: flex
     flex-shrink: 0
-
+    border-radius: 4px
     &.active
-      background: left / contain no-repeat url("../assets/tab.svg")
+      background: right/ cover no-repeat url("../assets/tab.svg")
       color: $light-text-color
-      padding-left: 64px
       font-weight: 600
+      justify-content: center
     &:hover
       color: $light-text-color
-      background: left / contain no-repeat url("../assets/tab.svg")
-
+      background: right/ cover no-repeat url("../assets/tab.svg")
+  &-texts
+    width: 100%
+    height: 100%
   &-text
-    display: flex
+    display: none
     align-items: center
     gap: 0 30px
     &__image
@@ -366,11 +369,13 @@ section
     flex-direction: column
     border: 1px solid $secondary-light
     border-radius: 4px
-    padding: 16px 24px
+    padding: 16px 19px
     cursor: pointer
-    transition: transform .3s
     &:hover
-      transform: scale(1.03)
+      .prices-card__icon
+        position: relative
+        transform: translateX(38px)
+        filter: brightness(1)
 
     &__image
       margin: 0 10px 8px
@@ -401,7 +406,8 @@ section
     &__icon
       width: 40px
       height: 40px
-      stroke: $text-color
+      filter: brightness(0.1)
+      transition: all .3s
 
   &-button
     background: transparent
@@ -713,7 +719,7 @@ section
 .range-block
   position: relative
 .range-slider
-  width: 50%
+  width: 0%
   height: 8px
   background: $primary-color
   position: absolute
@@ -958,6 +964,7 @@ input[type="checkbox"]
       cursor: pointer
       justify-content: center
       color: #fff
+      font-weight: 600
 .mobile-menu
   display: none
   position: fixed
@@ -989,4 +996,7 @@ input[type="checkbox"]
       padding: 0 25px
 .dropdown-back
   display: none
+
+.visible
+  display: flex
 @import _media

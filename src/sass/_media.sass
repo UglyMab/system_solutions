@@ -246,6 +246,10 @@
     max-height: 100%
   .calculator-options__item
     max-width: 100%
+    justify-content: space-between
+    &-title
+      max-width: 100%
+      text-align: left
   .calculator-total__wrapper
     flex-direction: column
     align-items: center
@@ -255,6 +259,7 @@
     width: 100%
     padding-bottom: 8px
     border-bottom: 1px solid #c3c3c3
+
 @media screen and (max-width: 670px)
   .dropdown-close
     display: block
@@ -296,24 +301,30 @@
     &-tabs
       width: 100%
       min-width: auto
+    &-tab
+      background: right 20px center/ 24px 24px no-repeat url(../assets/arrow-right-dark.svg)
+
     &-tab.active
       border-radius: 4px
-      background: $primary-color
+      // background: $primary-color
       margin-bottom: 300px
       padding-left: 20px
+      background: $primary-color right 20px center/ 24px 24px no-repeat url(../assets/tab-arrow.svg)
     &-tab:hover
-      background: transparent
-      color: $text-color
-    &-text
+      background: $primary-color right 20px center/ 24px 24px no-repeat url(../assets/tab-arrow.svg)
+
+    &-texts
       position: absolute
       top: 120px
       width: 100%
+      height: auto
+    &-text
       &__description
         max-width: 100%
         width: 95%
         padding: 0
       &__image
-        width: 80%
+        height: 280px
   .about
     &-inner
       position: relative
@@ -380,6 +391,7 @@
 
     &-button
       margin-top: 16px
+      width: 100%
       &-wrapper
         justify-content: center
         width: 205px

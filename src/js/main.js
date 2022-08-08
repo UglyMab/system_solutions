@@ -149,10 +149,53 @@ function listenRange(elem) {
   const max = elem.max
   const slider = elem.nextElementSibling
   const output = elem.parentNode.nextElementSibling.childNodes[1]
-  elem.addEventListener('change', (e) => {
+  elem.addEventListener('input', (e) => {
     const value = elem.value
     output.value = value
     slider.style.width = (100 / max) * value + '%'
   })
 }
 forOfNodeList(ranges, listenRange)
+
+const services = document.querySelectorAll('.services-tab')
+const servicesText = document.querySelectorAll('.services-text')
+
+function listenServices(elem) {
+  console.log()
+  elem.addEventListener('click', (e) => {
+    const index = indexInParent(e.target)
+    const serviceText = servicesText[index]
+    forOfNodeList(servicesText, toggleServicesTextClass)
+    forOfNodeList(services, toggleServicesClass)
+    forOfNodeList(services, removeServicesMargin)
+    elem.classList.add('active')
+    serviceText.classList.add('visible')
+    if (window.screen.width < 670) {
+      serviceText.parentElement.style.top = index * 48 + 120 + 'px'
+      if (serviceText.clientHeight > 300) {
+        elem.style.marginBottom = serviceText.clientHeight + 10 + 'px'
+      } else {
+        elem.style.marginBottom = '300px'
+      }
+    }
+  })
+}
+forOfNodeList(services, listenServices)
+function toggleServicesClass(elem) {
+  elem.classList.remove('active')
+}
+function toggleServicesTextClass(elem) {
+  elem.classList.remove('visible')
+}
+function removeServicesMargin(elem) {
+  elem.style.marginBottom = 0
+}
+function indexInParent(node) {
+  var children = node.parentNode.childNodes
+  var num = 0
+  for (var i = 0; i < children.length; i++) {
+    if (children[i] == node) return num
+    if (children[i].nodeType == 1) num++
+  }
+  return -1
+}
