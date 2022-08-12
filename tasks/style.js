@@ -10,7 +10,7 @@ export const style = () => {
   return app.gulp
     .src('src/sass/*.sass')
     .pipe(sourcemaps.init())
-    .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
+    .pipe(sass({ outputStyle: 'expanded' }).on('error', sass.logError))
     .pipe(autoprefixer({}))
     .pipe(sourcemaps.write('/sourcemap'))
     .pipe(app.gulp.dest('dist/css'))

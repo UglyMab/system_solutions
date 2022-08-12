@@ -73,7 +73,7 @@
     &__title
       text-align: left
       margin-bottom: 13px
-  .calculator-options__item-title
+  .options-title
     max-width: 135px
 // планшеты
 @media screen and (max-width: 1024px)
@@ -90,13 +90,25 @@
       flex-direction: column
     &-text
       max-width: 100%
-  .calculator-options__wrapper
+  .options-wrapper
     max-height: 280px
-  .calculator-options__item
+  .options-block
     width: 40%
     max-width: 40%
     flex-grow: 1
 @media screen and (max-width: 768px)
+  .text-s
+    font-size: $font-14
+  .text-m
+    font-size: $font-14
+  .text-l
+    font-size: $font-16
+  .text-xl
+    font-size: $font-16
+  .text-xxl
+    font-size: $font-24
+  .text-title
+    font-size: 40px
   .how
     .advantages-item
       flex-direction: row
@@ -111,32 +123,14 @@
         height: 32px
         margin-right: 8px
 
-  .services-text__description,.about-text__description,.prices-subtitle,.calculator-subtitle,.advantages-item__description,.reviews-slider__item-description
-    font-size: 14px
-    line-height: 140%
-  .section-title
-    font-size: 24px
-    line-height: 29px
   .team-slider__item-lastname
     font-size: 16px
     line-height: 19px
   .reviews-slider__item-date
     font-size: 12px
     line-height: 140%
-  .team-slider__item-firstname,.reviews-slider__item-name
-    font-size: 14px
-    line-height: 17px
   .hero
     &-text
-      &__title
-        font-size: 40px
-        line-height: 48px
-      &__subtitle
-        font-size: 16px
-        line-height: 19px
-        b
-          font-size: 16px
-          line-height: 19px
   .about
     &-inner
       flex-direction: column
@@ -149,40 +143,41 @@
   .calculator
     &-inner
       padding: 24px 16px
-    &-options
-      &__wrapper
-        max-height: 270px
-        flex-direction: row
-        justify-content: space-between
-        align-items: flex-end
-      &__item
-        max-width: 48%
-        width: 100%
-    &-total
-      &__wrapper
-        position: relative
-        flex-wrap: wrap
-        justify-content: center
-      &__title
-        position: absolute
-        left: 0
-        top: -36px
-      &__item
-        width: 25%
-      &__button
-        margin-top: 24px
-  .range
+  .options
+    &-wrapper
+      max-height: 270px
+      flex-direction: row
+      justify-content: space-between
+      align-items: flex-end
+    &-block
+      max-width: 48%
+      width: 100%
+  .total
     &-wrapper
       position: relative
+      flex-wrap: wrap
+      justify-content: center
+    &-title
+      position: absolute
+      left: 0
+      top: -36px
+      margin: 0
+    &-block
+      width: 25%
+    &-button
+      margin-top: 24px
+  .range
+    &-block
+      position: relative
       padding-bottom: 50px
-      .range-output
+      .output-block
         position: absolute
         left: 50%
         bottom: 0
         transform: translateX(-50%)
         margin-left: 0
   .toggle
-    &-wrapper
+    &-block
       margin-bottom: 10px
       margin-top: -20px
       span,label
@@ -192,15 +187,11 @@
       max-width: 220px
     &-form
       &__title
-
         font-size: 24px
         line-height: 29px
       &__subtitle
         font-weight: 400
-        font-size: 14px
-        line-height: 120%
         margin-bottom: 16px
-      &__input
   .swiper
     max-width: 90%
     margin: 0 auto
@@ -209,7 +200,6 @@
   .swiper-button-next
     right: 10px
 @media screen and (max-width: 700px)
-
   .header
     flex-wrap: wrap
     padding: 20px
@@ -242,18 +232,19 @@
       width: 300px
   .advantages-item
     min-width: 280px
-  .calculator-options__wrapper
+  .options-wrapper
     max-height: 100%
-  .calculator-options__item
-    max-width: 100%
-    justify-content: space-between
+  .options
+    &-block
+      max-width: 100%
+      justify-content: space-between
     &-title
       max-width: 100%
       text-align: left
-  .calculator-total__wrapper
+  .total-wrapper
     flex-direction: column
     align-items: center
-  .calculator-total__item
+  .total-block
     align-items: center
     margin-bottom: 10px
     width: 100%
@@ -306,7 +297,6 @@
 
     &-tab.active
       border-radius: 4px
-      // background: $primary-color
       margin-bottom: 300px
       padding-left: 20px
       background: $primary-color right 20px center/ 24px 24px no-repeat url(../assets/tab-arrow.svg)
@@ -341,21 +331,19 @@
   .feedback
     &-image
       display: none
-  .range-block
-
-    display: none
   .range-wrapper
+    display: none
+  .range-block
     width: 100%
     padding-bottom: 10px
     position: relative
-    .range-output
+    .output-block
       transform: translate(0%,-50%)
       top: 50%
-      // left: 100%
       left: auto
       right: 0px
   .toggle
-    &-wrapper
+    &-block
       margin: 0
       margin-top: -14px
       label,span
@@ -400,7 +388,6 @@
       &-wrapper
         width: 206px
     &-mobile-menu
-      // margin: 0 20px
       margin-left: auto
 
   .prices-card
@@ -416,15 +403,14 @@
   .services
     .container
       padding: 0
-  .range-wrapper
+  .range-block
     margin-bottom: 40px
-    .range-output
+    .output-block
       top: auto
       bottom: -55px
   .toggle
-    &-block
 
-    &-wrapper
+    &-block
       margin: 0
       margin-top: -14px
       flex-direction: column
@@ -452,6 +438,3 @@
       right: 27%
   .prices-cards
     gap: 0
-  .prices-card
-    &:hover
-      transform: scale(1)

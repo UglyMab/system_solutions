@@ -5,7 +5,7 @@ html,
 body
   height: auto
 *
-  font-size: $font-m
+  font-size: $font-18
   color: $text-color
   scrollbar-width: thin
   scrollbar-color: $secondary-light $bg-color
@@ -38,13 +38,11 @@ section
   margin-bottom: 80px
 .section-title
   font-weight: 600
-  font-size: $font-xxl
-  line-height: 44px
   text-align: center
   margin-bottom: 40px
 
 .phone
-  font-size: $font-m
+  font-size: $font-18
   font-weight: 600
   line-height: 22px
   color: $primary-color
@@ -54,7 +52,7 @@ section
 // кнопка
 .button
   font-weight: 500
-  font-size: $font-m
+  font-size: $font-18
   padding: 12px 24px
   color: $light-text-color
   background: $primary-color
@@ -90,6 +88,7 @@ section
   align-items: center
   justify-content: flex-end
   position: sticky
+  top: 1px
   width: 375px
   margin-left: auto
 .header
@@ -152,26 +151,24 @@ section
         padding: 0
     &__phone
 
-      // margin-right: 64px
       margin-right: auto
       padding-left: 16px
       &:hover
         color: $secondary-color
 
     &__work
-      // margin-right: 64px
       margin-right: auto
       padding-left: 16px
       &-title
         font-weight: 500
-        font-size: $font-m
+        font-size: $font-18
         line-height: 22px
         margin-bottom: 4px
 
       &-hours
-        font-size: $font-m
+        font-size: $font-18
         sup
-          font-size: $font-xs
+          font-size: $font-14
         span
           font-weight: 500
           font-weight: 500
@@ -191,8 +188,6 @@ section
       padding: 16px 32px
   &-button
     margin-left: auto
-    position: sticky
-    top: 1px
     &:hover
       background: $secondary-color
 .sticky
@@ -212,22 +207,15 @@ section
     flex-direction: column
     max-width: 570px
     &__suptitle
-      font-size: $font-s
-      line-height: 19px
       color: $secondary-color
     &__title
-      font-size: $font-title
       font-weight: 700
       line-height: 77px
       text-transform: capitalize
       color: $primary-color
     &__subtitle
-      font-size: $font-l
-      line-height: 24px
       b
         color: $secondary-color
-        font-size: $font-xl
-        line-height: 29px
   &-image
     object-fit: cover
     width: 100%
@@ -250,14 +238,9 @@ section
       max-width: 64px
     &__title
       padding: 24px 0 8px
-      font-size: $font-l
       font-weight: 600
-      line-height: 24px
       text-align: center
-
     &__description
-      line-height: 19px
-      font-size: $font-s
       text-align: center
       width: 100%
       font-weight: 400
@@ -283,7 +266,6 @@ section
     max-width: 570px
     width: 100%
     &__description
-      font-size: $font-s
       line-height: 140%
       margin-bottom: 32px
     &__button
@@ -307,12 +289,11 @@ section
     flex-direction: column
     flex: 1 0
     min-width: 380px
-
   &-tab
     padding: 14px 24px
     position: relative
     cursor: pointer
-    font-size: $font-s
+    font-size: $font-16
     display: flex
     flex-shrink: 0
     border-radius: 4px
@@ -337,7 +318,6 @@ section
       max-width: 300px
     &__description
       width: 100%
-      font-size: $font-s
       line-height: 140%
       max-width: 370px
       display: flex
@@ -355,8 +335,6 @@ section
   &-subtitle
     text-align: center
     margin-bottom: 40px
-    font-size: $font-s
-    line-height: 19px
   &-cards
     display: flex
     width: 100%
@@ -384,8 +362,8 @@ section
       max-width: 200px
     &__title
       text-align: center
-      font-size: $font-s
-      line-height: 19px
+      font-size: $font-16
+      line-height: 120%
       margin-bottom: 27px
     &__bottom
       display: flex
@@ -394,11 +372,11 @@ section
     &__price
       color: $primary-color
       font-weight: 600
-      font-size: $font-xl
+      font-size: $font-24
       line-height: 29px
       text-transform: uppercase
       span
-        font-size: $font-xs
+        font-size: $font-14
         font-weight: 400
         line-height: 17px
         color: inherit
@@ -466,14 +444,12 @@ section
     margin: 40px 0
     &__title
       font-weight: 600
-      font-size: $font-xxl
+      font-size: $font-36
       line-height: 44px
       color: #fff
       margin-bottom: 8px
     &__subtitle
       font-weight: 400
-      line-height: 120%
-      font-size: $font-s
       color: #fff
       margin-bottom: 30px
     &__input
@@ -545,21 +521,18 @@ section
         width: 100%
         max-width: 300px
       &-position
-        font-size: $font-s
         line-height: 140%
         margin-bottom: 16px
         margin-top: 8px
       &-lastname
-        font-size: $font-xl
+        font-size: $font-24
         text-transform: capitalize
         line-height: 29px
         margin-bottom: 4px
         color: $primary-color
         font-weight: 600
       &-name
-        font-size: $font-l
         margin-bottom: 10px
-        line-height: 24px
         color: $primary-color
         font-weight: 600
 // отзывы
@@ -582,16 +555,13 @@ section
         display: flex
         flex-direction: column
       &-name
-        line-height: 19px
-        font-size: $font-s
         margin-bottom: 16px
         color: $primary-color
       &-description
-        font-size: $font-s
         line-height: 140%
         margin-bottom: 16px
       &-date
-        font-size: $font-xs
+        font-size: $font-14
         line-height: 140%
 
 // подвал
@@ -614,14 +584,14 @@ section
       cursor: pointer
       text-transform: capitalize
       color: #fff
-      font-size: $font-s
+      font-size: $font-16
       font-weight: 400
       line-height: 19px
 
   &-email
     color: #fff
     padding: 12px 24px
-    font-size: $font-m
+    font-size: $font-18
     line-height: 22px
     color: $primary-color
     &:hover
@@ -633,7 +603,7 @@ section
   &-address,&-work
     margin-top: 16px
     color: #fff
-    font-size: $font-xs
+    font-size: $font-14
     line-height: 17px
     sup
 
@@ -647,76 +617,73 @@ section
   &-subtitle
     text-align: center
     margin-bottom: 40px
-    font-size: $font-s
-    line-height: 19px
   &-inner
     display: flex
     flex-direction: column
     border: 1px solid #C3C3C3
     border-radius: 4px
     padding: 40px 35px
-  &-block
-    display: flex
-    align-items: center
-  &-options
-    &__title
-      font-size: $font-l
+    &-title
+      font-size: $font-20
       font-weight: 600
       line-height: 24px
       margin: 16px 0
-    &__wrapper
-      display: flex
-      flex-wrap: wrap
-      gap: 25px
-      flex-direction: column
-      max-height: 170px
-      align-items: flex-end
-    &__item
-      display: flex
-      max-width: 33%
-      justify-content: flex-end
-      .range-output
-        margin-left: 16px
-      &-title
-        max-width: 210px
-        text-align: right
-        font-size: $font-xs
-        line-height: 17px
-  &-total
-    &__wrapper
-      display: flex
-      justify-content: space-between
-      align-items: flex-start
-      margin-top: 80px
-    &__title
-      font-size: $font-l
-      font-weight: 600
-      line-height: 24px
-    &__item
-      display: flex
-      flex-direction: column
-      &-discount
-        font-weight: 600
-        font-size: $font-l
-        color: $secondary-color
-        margin-top: 13px
+  &-block
+    display: flex
+    align-items: center
 
-      &-price
-        font-size: $font-xl
-        color: $primary-color
-        font-weight: 600
-        margin-top: 16px
-        span
-          color: $primary-color
-          font-weight: 400
-          font-size: $font-xs
-    &__button
-      margin-top: auto
-      &:hover
-        background: $secondary-color
-
+.total
+  &-wrapper
+    display: flex
+    justify-content: space-between
+    align-items: flex-start
+    margin-top: 80px
+  &-title
+    font-size: $font-20
+    font-weight: 600
+    line-height: 24px
+  &-block
+    display: flex
+    flex-direction: column
+  &-discount
+    font-weight: 600
+    font-size: $font-20
+    color: $secondary-color
+    margin-top: 13px
+  &-price
+    font-size: $font-24
+    color: $primary-color
+    font-weight: 600
+    margin-top: 16px
+    span
+      color: $primary-color
+      font-weight: 400
+      font-size: $font-14
+  &-button
+    margin-top: auto
+    &:hover
+      background: $secondary-color
+.options
+  &-wrapper
+    display: flex
+    flex-wrap: wrap
+    gap: 25px
+    flex-direction: column
+    max-height: 170px
+    align-items: flex-end
+  &-block
+    display: flex
+    max-width: 33%
+    justify-content: flex-end
+    .output-block
+      margin-left: 16px
+  &-title
+    max-width: 210px
+    text-align: right
+    font-size: $font-14
+    line-height: 17px
   // ползунок
-.range-block
+.range-wrapper
   position: relative
 .range-slider
   width: 0%
@@ -780,7 +747,7 @@ input[type=range]::-moz-range-thumb
 
 .range
   position: relative
-  &-wrapper
+  &-block
     margin-bottom: 24px
   &::after
     position: absolute
@@ -795,11 +762,11 @@ input[type=range]::-moz-range-thumb
     z-index: -1
   &-label
     display: flex
-    font-size: $font-s
+    font-size: $font-16
     line-height: 19px
-  &-block
+    min-width: 250px
+  &-wrapper
     display: flex
-
     margin-left: 30px
     flex-grow: 1
     flex-direction: column
@@ -809,9 +776,10 @@ input[type=range]::-moz-range-thumb
     justify-content: space-between
     line-height: 17px
     li
-      font-size: $font-xs
+      font-size: $font-14
 
-  &-output
+.output
+  &-block
     display: flex
     align-items: center
     gap: 8px
@@ -848,7 +816,7 @@ input[type=range]::-moz-range-thumb
     display: flex
     align-items: center
     justify-content: center
-    font-size: $font-s
+    font-size: $font-16
     line-height: 16px
     border: 1px solid $secondary-light
     border-radius: 4px
@@ -868,45 +836,45 @@ input[type="checkbox"]
       transform: translateX(12px)
       background-color: #FFF
 .toggle
-  &-block
+  &-wrapper
     display: flex
     align-items: center
-  &-wrapper
+  &-block
     margin-top: -4px
     margin-bottom: 20px
   &-checkbox
-    &__label
-      display: flex
-      width: 36px
-      height: 24px
-      border-radius: 20px
-      position: relative
-      cursor: pointer
-      background: #c3c3c3
+  &-label
+    display: flex
+    width: 36px
+    height: 24px
+    border-radius: 20px
+    position: relative
+    cursor: pointer
+    background: #c3c3c3
 
-      &:before
-        transition: transform .25s ease
-        content: ""
-        display: block
-        position: absolute
-        width: 20px
-        height: 20px
-        background-color: #fff
-        border-radius: 50%
-        top: 2px
-        left: 2px
-    &__text
-      font-size: $font-s
-      line-height: 19px
-      margin-left: 4px
-      margin-right: 25px
+    &:before
+      transition: transform .25s ease
+      content: ""
+      display: block
+      position: absolute
+      width: 20px
+      height: 20px
+      background-color: #fff
+      border-radius: 50%
+      top: 2px
+      left: 2px
+  &-text
+    font-size: $font-16
+    line-height: 19px
+    margin-left: 4px
+    margin-right: 25px
 
 // радиокнопки
 
-.calculator-total__item-radio input[type=radio]
+.total-radio input[type=radio]
   display: none
 
-.calculator-total__item-radio label
+.total-radio label
   display: inline-block
   cursor: pointer
   position: relative
@@ -926,7 +894,7 @@ input[type="checkbox"]
     transform: translateY(-50%)
     background: url(../assets/check-square.svg) 0 0 no-repeat
 
-.calculator-total__item-radio input[type=radio]:checked + label:before
+.total-radio input[type=radio]:checked + label:before
   background: url(../assets/check-square-active.svg) 0 0 no-repeat
 .swiper
   width: 100%
@@ -956,7 +924,7 @@ input[type="checkbox"]
     display: flex
     text-transform: none
     padding: 14px 16px
-    font-size: $font-s
+    font-size: $font-16
     line-height: 19px
     width: 100%
     &:hover
@@ -999,4 +967,22 @@ input[type="checkbox"]
 
 .visible
   display: flex
+
+.w-375
+  width: 375px
+.mx-w
+  max-width: 100%
+.align-start
+  align-items: flex-start
+.justify-center
+  justify-content: center
+.list
+  &-item
+    line-height: 24px
+    padding-left: 32px
+    background-image: url("../assets/list-bullet.svg")
+    background-position: 0 0
+    background-size: 24px 24px
+    background-repeat: no-repeat
+    margin-bottom: 10px
 @import _media

@@ -100,8 +100,7 @@ mobileMenu.addEventListener('click', (e) => {
     dropdownMenu.style.display = 'none'
   }
 })
-const outputs = document.querySelectorAll('.range-output')
-
+const outputs = document.querySelectorAll('.output-block')
 function forOfNodeList(list, f) {
   for (const iter of list) {
     f(iter)
@@ -109,13 +108,12 @@ function forOfNodeList(list, f) {
 }
 function listenOutput(elem) {
   let range
-  if (elem.previousElementSibling.classList.contains('range-block')) {
-    range = elem.previousElementSibling.childNodes[2]
+  if (elem.previousElementSibling.classList.contains('range-wrapper')) {
+    range = elem.previousElementSibling.querySelector('.range')
   }
-  const outputPlus = elem.lastChild
-  const outputMinus = elem.firstChild
-  const outputInput = elem.childNodes[1]
-
+  const outputPlus = elem.querySelector('.output-plus')
+  const outputMinus = elem.querySelector('.output-minus')
+  const outputInput = elem.querySelector('.output-number')
   outputPlus.addEventListener('click', (e) => {
     const val = +outputInput.value + 1
     outputInput.value = val
@@ -148,7 +146,8 @@ function listenRange(elem) {
   const min = elem.min
   const max = elem.max
   const slider = elem.nextElementSibling
-  const output = elem.parentNode.nextElementSibling.childNodes[1]
+  const output =
+    elem.parentNode.nextElementSibling.querySelector('.output-number')
   elem.addEventListener('input', (e) => {
     const value = elem.value
     output.value = value
