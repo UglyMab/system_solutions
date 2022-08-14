@@ -1356,12 +1356,20 @@ input[type=checkbox]:checked + label:before {
   display: flex;
 }
 
+.m0-a {
+  margin: 0 auto;
+}
+
 .w-375 {
   width: 375px;
 }
 
 .mx-w {
   max-width: 100%;
+}
+
+.mx-w770 {
+  max-width: 770px;
 }
 
 .align-start {
@@ -1490,6 +1498,9 @@ input[type=checkbox]:checked + label:before {
   }
 }
 @media screen and (max-width: 1024px) {
+  .about-image.image-right {
+    display: none;
+  }
   .services-text {
     position: relative;
     -ms-flex-align: start;
@@ -1723,6 +1734,9 @@ input[type=checkbox]:checked + label:before {
   }
 }
 @media screen and (max-width: 670px) {
+  .about-image.image-right {
+    display: block;
+  }
   .dropdown-close {
     display: block;
     position: absolute;
