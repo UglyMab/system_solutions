@@ -92,7 +92,6 @@ dropdownOpen.addEventListener('click', (e) => {
   dropdownMenu.style.display = 'flex'
 })
 mobileMenu.addEventListener('click', (e) => {
-  console.log(e.target)
   if (
     !e.target.classList.contains('dropdown-link') &&
     e.target != dropdownOpen

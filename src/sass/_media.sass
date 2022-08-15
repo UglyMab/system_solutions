@@ -38,7 +38,7 @@
       text-transform: uppercase
       position: relative
       &:hover > ul
-        display: none
+        // display: none
   .container
     overflow: hidden
   .sticky
@@ -99,6 +99,10 @@
     max-width: 40%
     flex-grow: 1
 @media screen and (max-width: 768px)
+.menu
+  &-item
+    &:hover > ul
+      display: none
   .text-s
     font-size: $font-14
   .text-m
